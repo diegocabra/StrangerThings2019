@@ -1,10 +1,10 @@
 package Principal;
 
-import Objetos.Contenido;
+import Objetos.Elemento;
 
 public class Celda {
 	
-	protected Contenido elemento;
+	protected Elemento elemento;
 	protected int fila;
 	protected int columna;
 	
@@ -14,11 +14,11 @@ public class Celda {
 		elemento = null;	
 	}
 	
-	public Contenido getElemento() {
+	public Elemento getElemento() {
 		return elemento;
 	}
 	
-	public void setElemento(Contenido elem) {
+	public void setElemento(Elemento elem) {
 		elemento= elem;
 	}
 	

@@ -2,12 +2,12 @@ package Principal;
 
 import javax.swing.JPanel;
 
-import Objetos.Contenido;
+import Objetos.Elemento;
 
 public class Mapa {
 	private Celda mapa[][];
 	private int columnas, filas;
-	protected Contenido obs;
+	protected Elemento obs;
 	
 	public Mapa(int f,int c) {
 		this.filas = f;
@@ -42,11 +42,13 @@ public class Mapa {
 		return filas;
 	}
 	
-	public void setCeldaMapa(int x , int y , Contenido o) {
+	public void setCeldaMapa(int x , int y , Elemento o) {
 		mapa[x][y].setElemento(o);
 	}
 	
 	public void insertarObjetos() {
+		//llamar a fabrica de objetos logica 
+		//llamar fabrica grafica
 	}
 	
 

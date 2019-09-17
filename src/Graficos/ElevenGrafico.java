@@ -2,7 +2,7 @@ package Graficos;
 
 import javax.swing.ImageIcon;
 
-public class ElevenGrafico extends ContenidoGrafico{
+public class ElevenGrafico extends ElementoGrafico{
 	
 	public ElevenGrafico (int x,int y) {
 		super(x,y);

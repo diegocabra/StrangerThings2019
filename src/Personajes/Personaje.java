@@ -1,9 +1,9 @@
 package Personajes;
 
-import Objetos.Contenido;
+import Objetos.Elemento;
 import Principal.Celda;
 
-public abstract class Personaje extends Contenido{
+public abstract class Personaje extends Elemento{
 	protected float fuerza;
 
 	

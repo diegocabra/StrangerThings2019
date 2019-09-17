@@ -1,9 +1,9 @@
 package Disparos;
 
-import Objetos.Contenido;
+import Objetos.Elemento;
 import Principal.Celda;
 
-public class DisparoPersonaje extends Contenido {
+public class DisparoPersonaje extends Elemento {
 	protected int danioAtaque,velocidad;
 	
 	public DisparoPersonaje(Celda c) {

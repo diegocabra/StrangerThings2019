@@ -50,7 +50,7 @@ public class MapaGUI extends JFrame{
 	
 	public MapaGUI() {
 		
-		logica = new Logica();
+		logica = new Logica(this);
 		map = logica.getMap();
 		
 		
@@ -69,6 +69,24 @@ public class MapaGUI extends JFrame{
 		contentPane.add(panelCombate);
 		panelCombate.setLayout(null);
 		panelCombate.setBackground(Color.yellow);
+		
+		/*
+		panel_1.setBorder(null);
+		panel_1.setBounds(10, 11, 325, 649);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		panel_2.setBorder(null);
+		panel_2.setBounds(334, 584, 1000, 76);
+		contentPane.add(panel_2);
+		panel_2.setLayout(null);
+		
+		
+		panel_3.setLayout(null);
+		panel_3.setBorder(null);
+		panel_3.setBounds(334, 84, 1000, 500);
+		contentPane.add(panel_3);s
+		*/
 		JButton botonEleven = new JButton("Eleven");
 		botonEleven.setBounds(10,0,132,76);
 		contentPane.add(botonEleven);
@@ -88,8 +106,6 @@ public class MapaGUI extends JFrame{
 							int columnas = x /80;
 							//System.out.println("Columna : "+ columnas + "  Filas: "+filas);
 							estadoBoton1 = false;
-					      // logica.createEleven(celda); 
-							//elementografico.crearElevengrafico(x,y);
 							ImageIcon imagen1 = new ImageIcon(getClass().getResource("/Sprites/eleven.png"));
 							 JLabel eleven = new JLabel();
 							 eleven.setIcon(imagen1);

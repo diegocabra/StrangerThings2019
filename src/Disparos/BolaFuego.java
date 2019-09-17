@@ -9,7 +9,7 @@ public class BolaFuego extends DisparoPersonaje{
 		super(c);
 		danioAtaque = 300;
 		velocidad = 1;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/BolaDeFuego.gif")));
+		//grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/BolaDeFuego.gif")));
 		
 	}
 

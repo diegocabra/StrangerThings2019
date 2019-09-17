@@ -1,7 +1,6 @@
 package Principal;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+
 
 import Personajes.Eleven;
 
@@ -10,13 +9,11 @@ public class Logica {
 	private static int tamanioCelda = 80;
 	protected static int columnas = ((700 - 80 ) / tamanioCelda)+2;
     protected static int filas = ((500 - 40) / tamanioCelda)+1;
-    protected MapaGUI gui;
 	protected Mapa mapaCombate;
-	
-	
-	public Logica (MapaGUI g) {
-		mapaCombate = new Mapa(columnas,filas);		
-		gui = g;
+	protected int oro;
+	public Logica () {
+		mapaCombate = new Mapa(columnas,filas);
+		oro=500;
 	}
 	
 
@@ -28,12 +25,6 @@ public class Logica {
 			Eleven el = new Eleven(c);
 			toReturn = el;
 			c.setElemento(el);	
-			gui.agregar(el.getGrafico());
-			/*Falta insertar graficamete 
-			JLabel l = el.getGrafico(0);
-			panelMapa.add(l);
-			l.repaint();
-			*/
 			
 		}
 		
