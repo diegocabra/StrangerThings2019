@@ -63,7 +63,7 @@
 											"top": 1047,
 											"width": 73.919921875,
 											"height": 13,
-											"text": "Logica"
+											"text": "Juego"
 										},
 										{
 											"_type": "LabelView",
@@ -1295,7 +1295,7 @@
 											"top": 863,
 											"width": 95,
 											"height": 13,
-											"text": "Defensa"
+											"text": "Jugador"
 										},
 										{
 											"_type": "LabelView",
@@ -7655,7 +7655,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Logica"
+					"name": "Juego"
 				},
 				{
 					"_type": "UMLClass",
@@ -8307,7 +8307,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Defensa",
+					"name": "Jugador",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
