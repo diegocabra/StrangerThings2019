@@ -1,6 +1,4 @@
 INDEX VERSION 1.131+F:\Uni\GIT\StrangerThings2019\.metadata\.plugins\org.eclipse.jdt.core
-4013676014.index
 1255250627.index
-2330028205.index
-2199821859.index
+1067094681.index
 3438819025.index
