@@ -16,6 +16,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Botonera.Boton;
+import Botonera.BotonEleven;
 import Objetos.Contenido;
 import Personajes.Eleven;
 import herramientas.FabricaPersonajes;
@@ -102,7 +104,8 @@ public class MapaGUI extends JFrame{
 		panelOpciones.setLayout(null);
 		panelOpciones.setBorder(BorderFactory.createLineBorder(Color.black));
 		panelOpciones.setBounds(0,0, ancho, 160);
-		
+	 BotonEleven BEleven = new BotonEleven ();
+	BEleven.addActionListener(new oyenteBEleven())
 		
 		int i = 0;
 		nombres = new String[10];
@@ -146,9 +149,9 @@ public class MapaGUI extends JFrame{
 		
 	}
 	
-	private class OyenteEliminar implements ActionListener {
+	private class OyenteBeleven implements ActionListener {
         public void actionPerformed(ActionEvent e)
-        {
+        {BEleven.generatedEntidad()
         	
         }
     }

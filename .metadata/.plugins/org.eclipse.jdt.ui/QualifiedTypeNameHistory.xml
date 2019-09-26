@@ -2,4 +2,10 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.swing.border.EmptyBorder"/>
 <fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="Personajes.Personaje"/>
+<fullyQualifiedTypeName name="Personajes.Eleven"/>
+<fullyQualifiedTypeName name="Principal.Celda"/>
+<fullyQualifiedTypeName name="Botonera.BotonEleven"/>
+<fullyQualifiedTypeName name="Botonera.Boton"/>
 </qualifiedTypeNameHistroy>
