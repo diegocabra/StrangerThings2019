@@ -20,19 +20,13 @@ import Botonera.Boton;
 import Botonera.BotonEleven;
 import Objetos.Contenido;
 import Personajes.Eleven;
-import herramientas.FabricaPersonajes;
-import herramientas.FabricaPersonal;
  
-
-
-
-
 
 public class MapaGUI extends JFrame{
 	
 	protected int cantFilas,cantColumnas,alto,ancho,fabricado,cantidadBombas;	
 
-	protected FabricaPersonajes fabricaPersonajes;
+
 	
 	protected Juego juego;
 	protected Mapa mapa;	
@@ -58,7 +52,7 @@ public class MapaGUI extends JFrame{
 		alto = cantFilas * 80;
 		ancho = cantColumnas;
 		
-		fabricaPersonajes = new FabricaPersonal();
+		
 		fabricado=-1;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -105,7 +99,7 @@ public class MapaGUI extends JFrame{
 		panelOpciones.setBorder(BorderFactory.createLineBorder(Color.black));
 		panelOpciones.setBounds(0,0, ancho, 160);
 	 BotonEleven BEleven = new BotonEleven ();
-	BEleven.addActionListener(new oyenteBEleven())
+	BEleven.addActionListener(new OyenteBeleven());
 		
 		int i = 0;
 		nombres = new String[10];
@@ -151,7 +145,7 @@ public class MapaGUI extends JFrame{
 	
 	private class OyenteBeleven implements ActionListener {
         public void actionPerformed(ActionEvent e)
-        {BEleven.generatedEntidad()
+        {Boton.generateEntidad();
         	
         }
     }
@@ -171,38 +165,10 @@ public class MapaGUI extends JFrame{
         	int i = e.getY() ;
         	int j = e.getX();
         	System.out.println("ENTRE OYENTE PANEL MOUSE");
+        	int filas = i/80;
+        	int columna = j/80;
         	
-        	if(fabricado>=0)
-        	{
-        		Celda aux = mapa.getCelda(i, j);
-        		Contenido nuevo=null;
-    			switch (fabricado) {
-                case 0:  if(40<=juego.getMonedas()) nuevo = fabricaPersonajes.crearEleven(aux);
-                         break;
-                case 1:  if(50<=juego.getMonedas()) nuevo = fabricaPersonajes.crearMike(aux);
-                         break;
-                case 2:  if(50<=juego.getMonedas()) nuevo = fabricaPersonajes.crearDustin(aux);
-                         break;
-                case 3:  if(100<=juego.getMonedas()) nuevo = fabricaPersonajes.crearMaxine(aux);
-                		 break;
-                case 4:  if(125<=juego.getMonedas()) nuevo = fabricaPersonajes.crearHopper(aux);
-       		 			 break;
-            	}
-    			
-    			if(nuevo==null)
-    			{
-    				etiquetaInformacion.setText("NO DISPONE DE DINERO SUFICIENTE");
-    			}
-    			else
-    			{
-    				etiquetaInformacion.setText("");
-    				juego.decrementarMonedas(nuevo.getCosto());
-           			aux.agregar(nuevo);
-           			panelJuego.add(nuevo.getGrafico());
-            		}
-    			}
-        		
-        		fabricado=-1;
+        	
         	}
 
 		@Override
