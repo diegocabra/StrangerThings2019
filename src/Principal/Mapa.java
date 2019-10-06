@@ -2,32 +2,42 @@ package Principal;
 
 import javax.swing.JPanel;
 
-import Objetos.Elemento;
+import Objetos.Contenido;
+
 
 public class Mapa {
 	private Celda mapa[][];
 	private int columnas, filas;
-	protected Elemento obs;
+	protected Contenido obs;
+	protected Juego logica;
 	
-	public Mapa(int f,int c) {
+	
+	
+	public Mapa(int f,int c, Juego l) {
 		this.filas = f;
+		logica = l;
 		this.columnas = c;
 		this.mapa = new Celda[filas][columnas];
 		
 		for(int i = 0; i < filas; i++){
 			for(int j = 0; j < columnas; j++){
-				this.mapa[i][j] = new Celda( i, j);
-				this.mapa[i][j].setElemento(null);
+				this.mapa[i][j] = new Celda( i, j,this);
 			}
 		}
 		
 	}
 	
-	public Celda getCelda(int x, int y){
-		if((x < this.filas) && (x >= 0) && (y < this.columnas) && (y >= 0)) {
-			return this.mapa[x][y];
-		}
-		return null;
+	public Juego getJuego () {
+		return logica;
+	}
+	
+	public Celda getCelda(int f, int c)
+	{
+		Celda toReturn = null;
+		if(f>=0 && f<mapa.length)
+			if(c>=0 && c<mapa[0].length)
+				toReturn = mapa[f][c];
+		return toReturn;
 	}
 	
 	public Celda[][] getMapa() {
@@ -42,13 +52,11 @@ public class Mapa {
 		return filas;
 	}
 	
-	public void setCeldaMapa(int x , int y , Elemento o) {
-		mapa[x][y].setElemento(o);
+	public void setCeldaMapa(int x , int y , Contenido o) {
+		mapa[x][y].setContenido(o);
 	}
 	
 	public void insertarObjetos() {
-		//llamar a fabrica de objetos logica 
-		//llamar fabrica grafica
 	}
 	
 

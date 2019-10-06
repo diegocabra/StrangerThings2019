@@ -1,27 +1,50 @@
 package Principal;
 
-import Objetos.Elemento;
+
+import Objetos.Contenido;
+ 
 
 public class Celda {
 	
-	protected Elemento elemento;
-	protected int fila;
+	protected Contenido elemento;
 	protected int columna;
+	protected int fila;
+	protected Mapa mapa;
+
 	
-	public Celda(int f, int c) {
+	public Celda(int f, int c, Mapa m) {
+		mapa =m;
 		fila=f;
 		columna=c;
 		elemento = null;	
 	}
 	
-	public Elemento getElemento() {
-		return elemento;
+	
+	
+	public Celda getIzquierda () {
+		Celda toReturn = null;
+		if(columna -1 >= 0)
+			toReturn = mapa.getCelda(fila,columna-1);
+		return toReturn;
 	}
 	
-	public void setElemento(Elemento elem) {
+	public Celda getDerecha() {
+		Celda toReturn = null;
+		if(columna +1 < mapa.getColumna());
+			toReturn = mapa.getCelda(fila, columna +1);
+		
+		return toReturn;
+	}
+	
+	public void setContenido(Contenido elem) {
 		elemento= elem;
 	}
 	
+	public Contenido getContenido() {
+		return elemento;
+	}
+	
+
 	public int getFila(){
 		return fila;
 	}
@@ -32,6 +55,14 @@ public class Celda {
 	public void set(int x, int y) {
 		fila = x;
 		columna = y;
+	}
+	
+	public Mapa getMapa() {
+		return mapa;
+	}
+	
+	public void agregar(Contenido c) {
+		elemento = c;
 	}
 	
 

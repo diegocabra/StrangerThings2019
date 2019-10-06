@@ -1,23 +1,25 @@
 package Personajes;
 
-import Objetos.Elemento;
+import Objetos.Contenido;
 import Principal.Celda;
+import Visitor.Visitor;
 
-public abstract class Personaje extends Elemento{
-	protected float fuerza;
-
+public abstract class Personaje extends Contenido{
+	protected float danio;
+	protected boolean esperando;
 	
 	public Personaje (Celda c) {
 		super(c);
+		esperando = true;
 	}
 	
 	 
-	public void setFuerza (int f ) {
-		fuerza = f;
+	public void setDanio (int f ) {
+		danio = f;
 	}
 	
-	public float getFuerza (){
-		return fuerza;
+	public float getDanioAtaque (){
+		return danio;
 	}
 	
 	public void setVida(int v)
@@ -25,6 +27,25 @@ public abstract class Personaje extends Elemento{
 		vida = v;
 	}
 	
+	public boolean getEsperando() {
+		return esperando;
+	}
+	
+	
+	public void destruir()
+	{
+		super.destruir();
+	}
+	
+	 
+	public boolean aceptar(Visitor v) {
+		 v.visitarPersonaje(this);
+		return false;
+	}
+	
+	public abstract void atacar();
+	
+	public abstract void esperar();
 	
 	
 	
