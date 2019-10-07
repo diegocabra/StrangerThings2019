@@ -68,7 +68,6 @@ public abstract class Enemigo  extends Contenido{
 					aux = siguiente.getContenido();
 					if(aux !=null && aux.aceptar(miVisitor)) {
 						mover = false;
-					//	caminando = false;
 					}
 				}
 			}
