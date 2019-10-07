@@ -54,8 +54,8 @@ public abstract class Contenido {
 			grafico.setIcon(null);
 			grafico=null;
 		}
-		
-		miCelda.setContenido(null);
+		if(miCelda != null)
+			miCelda.setContenido(null);
 		
 	}
 	

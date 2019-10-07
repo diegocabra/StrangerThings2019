@@ -16,7 +16,7 @@ public abstract class DisparoPersonaje extends Contenido {
 	public DisparoPersonaje(Celda c)
 	{
 		super(c);
-		danioAtaque = 0;
+		danioAtaque = 1;
 		miVisitor = new VisitorDisparoPersonaje(this);
 	}
 	
@@ -34,7 +34,6 @@ public abstract class DisparoPersonaje extends Contenido {
 		boolean mover = true;
 		
 		if(miCelda!=null){
-			System.out.println("Entre a mover disparo");
 			Celda siguiente = miCelda.getDerecha();
 			int cont = 0;
 			Contenido aux;
@@ -53,7 +52,8 @@ public abstract class DisparoPersonaje extends Contenido {
 			if(mover){
 				miCelda.setContenido(null);
 				miCelda = miCelda.getDerecha();
-				miCelda.agregar(this);
+				if(miCelda != null)					//Caso en donde llega al límite del mapa
+					miCelda.agregar(this);
 			}
 			else{
 				destruir();

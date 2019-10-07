@@ -1,6 +1,7 @@
 package Disparos;
 
-import Personajes.Eleven;
+import Personajes.Personaje;
+import Personajes.Soldado_1;
 import Principal.Celda;
 import Principal.Juego;
  
@@ -8,11 +9,11 @@ public class GenerarBolaDeFuego extends Thread{
 	
 	protected volatile boolean execute;
 	
-	protected Eleven el;
+	protected Personaje el;
 	protected Celda celda;
 	protected Juego juego;
 	
-	public GenerarBolaDeFuego(Eleven e) {
+	public GenerarBolaDeFuego(Personaje e) {
 		el = e;
 		celda = el.getCelda().getDerecha();
 		juego = celda.getMapa().getJuego();
@@ -44,7 +45,7 @@ public class GenerarBolaDeFuego extends Thread{
 			}
 			
 			try {
-				sleep(4300);
+				sleep(1300);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

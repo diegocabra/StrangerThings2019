@@ -13,6 +13,7 @@ public class VisitorPersonaje implements Visitor {
 	}
 	
 	public boolean visitarEnemigo(Enemigo e) {
+		System.out.print("SOLDADO COMBATIENDO");
 		e.decrementarVida(personaje.getDanioAtaque());
 		if(e.getVida() <=0) 
 			e.destruir();

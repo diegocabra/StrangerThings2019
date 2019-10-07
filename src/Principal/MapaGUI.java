@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Objetos.Contenido;
-import Personajes.Eleven;
+import Personajes.Soldado_1;
 import herramientas.FabricaPersonajes;
 import herramientas.FabricaPersonal;
  
@@ -84,7 +84,7 @@ public class MapaGUI extends JFrame{
 		//Panel combate
 		
 	    getContentPane().add(panelJuego);
-	    getContentPane().setBackground(Color.green);
+	    getContentPane().setBackground(Color.DARK_GRAY);
 	    getContentPane().add(panelOpciones);
 		
 		getContentPane().add(panelFondo);
@@ -174,15 +174,15 @@ public class MapaGUI extends JFrame{
         		Celda aux = mapa.getCelda(i, j);
         		Contenido nuevo=null;
     			switch (fabricado) {
-                case 0:  if(40<=juego.getMonedas()) nuevo = fabricaPersonajes.crearEleven(aux);
+                case 0:  if(40<=juego.getMonedas()) nuevo = fabricaPersonajes.crearSoldado1(aux);
                          break;
-                case 1:  if(50<=juego.getMonedas()) nuevo = fabricaPersonajes.crearMike(aux);
+                case 1:  if(50<=juego.getMonedas()) nuevo = fabricaPersonajes.crearSoldado2(aux);
                          break;
-                case 2:  if(50<=juego.getMonedas()) nuevo = fabricaPersonajes.crearDustin(aux);
+                case 2:  if(50<=juego.getMonedas()) nuevo = fabricaPersonajes.crearSoldado3(aux);
                          break;
-                case 3:  if(100<=juego.getMonedas()) nuevo = fabricaPersonajes.crearMaxine(aux);
+                case 3:  if(100<=juego.getMonedas()) nuevo = fabricaPersonajes.crearSoldado4(aux);
                 		 break;
-                case 4:  if(125<=juego.getMonedas()) nuevo = fabricaPersonajes.crearHopper(aux);
+                case 4:  if(125<=juego.getMonedas()) nuevo = fabricaPersonajes.crearSoldado5(aux);
        		 			 break;
             	}
     			

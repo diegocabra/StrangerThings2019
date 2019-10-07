@@ -32,12 +32,18 @@ public class VisitorEnemigo implements Visitor {
 		p.decrementarVida(enemigo.getDanioAtaque());
 		enemigo.decrementarVida(p.getDanioAtaque());
 		
+		System.out.println("VIDA ALIEN:"+enemigo.getVida()+" -> VIDA SOLDADO"+p.getVida());
 		if(enemigo.getVida() <= 0) {
 			enemigo.destruir();
 			p.esperar();
 		}
+		if(enemigo.getVida() <= 0) {
+			p.esperar();
+			enemigo.destruir();
+		}
 		
 		if(p.getVida() <= 0) {
+			
 			enemigo.caminar();
 			p.destruir();
 		}
@@ -56,6 +62,7 @@ public class VisitorEnemigo implements Visitor {
 		if(o.getVida()<= 0) {
 			enemigo.caminar();
 			o.destruir();
+			enemigo.setCaminando(true);
 		}
 		 
 		return true;

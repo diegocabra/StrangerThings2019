@@ -6,14 +6,15 @@ import Disparos.GenerarBolaDeFuego;
 import Graficos.ElevenGrafico;
 import Principal.Celda;
 
-public class Eleven extends Personaje {
+public class Soldado_1 extends Personaje {
 	
 	protected GenerarBolaDeFuego generarBolas;
-	public Eleven(Celda c) {
+	public Soldado_1(Celda c) {
 		super(c);
 		vida = 1000;
 		costo = 100;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/S1.gif")));
+		danio = 9;
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Soldado_1.gif")));
 		generarBolas = new GenerarBolaDeFuego(this);
 		generarBolas.start();
 		
@@ -24,12 +25,12 @@ public class Eleven extends Personaje {
 	
 	public void atacar() {
 		//cambiar Sprite (ATACANDO)
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/S1.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Soldado_1.gif")));
 	}
 	
 	public void esperar() {
 		//cambiar Sprite (ESPERANDO)
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/S1.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Soldado_1.gif")));
 
 	}
 	

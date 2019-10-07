@@ -10,7 +10,7 @@ import Enemigos.Monstruo;
 import Niveles.Nivel;
 import Niveles.Nivel1;
 import Objetos.Contenido;
-import Personajes.Eleven;
+import Personajes.Soldado_1;
 import herramientas.Coleccion;
  
 

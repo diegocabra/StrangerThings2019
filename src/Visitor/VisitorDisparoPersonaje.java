@@ -15,13 +15,14 @@ public class VisitorDisparoPersonaje implements Visitor {
 	
 	public boolean visitarEnemigo(Enemigo e){
 		e.decrementarVida(disparoPersonaje.getDanioAtaque());
-		if(e.getVida()<=0)
+		if(e.getVida()<=0) {
+			
 			e.destruir();
+		}
 		return true;
 	}
 	
-	public boolean visitarPersonaje(Personaje p)
-	{
+	public boolean visitarPersonaje(Personaje p){
 		//p.esperar();
 		return false;
 	}

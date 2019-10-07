@@ -9,12 +9,12 @@ public class Monstruo  extends Enemigo{
 	
 	public Monstruo (Celda c, boolean b) {
 		super(c,b);
-		vida = 1000;
-		danioAtaque = 4;
+		vida = 100;
+		danioAtaque = 3;
 		velocidad = 10;
 		puntos = 150;
 		
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien-caminando-2.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
 		
 		moverme = new MoverEnemigo(this);
 		moverme.start();
@@ -22,18 +22,18 @@ public class Monstruo  extends Enemigo{
 	
 	public void caminar() {
 		caminando = true;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien-caminando-2.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
 		
 	}
 	
 	public void atacar() {
 		caminando = false;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/A1.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_atacando_2.gif")));
 	}
 	
 	public void destruir() {
 		super.destruir();
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien-muriendo-1.gif")));
+		//grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_muriendo_2.gif")));
 	}
 
 	  

@@ -8,7 +8,7 @@ import Visitor.Visitor;
 public class BolaFuego extends DisparoPersonaje{
 	public BolaFuego(Celda c) {
 		super(c);
-		danioAtaque = 300;
+		danioAtaque = 40;
 		velocidad = 1;
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/BolaDeFuego.gif")));
 		moverme = new MoverDisparoPersonaje(this);

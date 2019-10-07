@@ -4,7 +4,7 @@ import java.util.Random;
 import Enemigos.Enemigo;
 import Enemigos.Monstruo;
 import Objetos.Muro;
-import Personajes.Eleven;
+import Personajes.Soldado_1;
 import Principal.Juego;
 import herramientas.Coleccion;
 import Principal.Celda;
@@ -65,6 +65,11 @@ public class Nivel1 extends Nivel{
 			celdaMuro.agregar(muro);
 			juego.agregar(muro);
 			
+			Celda celdaMuro2 = juego.getMap().getCelda(1,5*80);
+			Muro muro2 = new Muro(celdaMuro2);
+			celdaMuro2.agregar(muro2);
+			juego.agregar(muro2);
+			
 			
 			Random r1 = new Random();
 			//int Rnd1 = r1.nextInt(juego.getFilas());
@@ -73,7 +78,17 @@ public class Nivel1 extends Nivel{
 			celda.agregar(monstruo);
 			juego.agregar(monstruo);
 			juego.agregarEnemigo(monstruo);
-			System.out.println("CREO MONSTRUO");
+			
+			
+			Celda celda2 = juego.getMap().getCelda(1, 8*80);
+			Enemigo monstruo2 = new Monstruo(celda2,false);			
+			celda2.agregar(monstruo2);
+			juego.agregar(monstruo2);
+			juego.agregarEnemigo(monstruo2);
+			
+			
+			
+			 
 			sleep(8000);
 				 
 		} catch (InterruptedException e) {

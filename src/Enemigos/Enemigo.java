@@ -32,6 +32,10 @@ public abstract class Enemigo  extends Contenido{
 		return danioAtaque;
 	}
 	
+	public void setCaminando(boolean b) {
+		caminando = b;
+	}
+	
 	public boolean getCaminando()
 	{
 		return caminando;
@@ -64,14 +68,17 @@ public abstract class Enemigo  extends Contenido{
 					aux = siguiente.getContenido();
 					if(aux !=null && aux.aceptar(miVisitor)) {
 						mover = false;
+					//	caminando = false;
 					}
 				}
 			}
-			if(mover) {	
+			if(mover && caminando) {
+				System.out.println("Continuo caminando");
 				caminar();
 				miCelda.setContenido(null);
 				miCelda = miCelda.getIzquierda();
-				miCelda.setContenido(this);
+				if(miCelda != null)
+					miCelda.setContenido(this);
 			}
 		}
 	}
