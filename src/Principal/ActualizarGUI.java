@@ -1,6 +1,6 @@
 package Principal;
 
-
+//prueba
 public class ActualizarGUI extends Thread{
 
 	protected volatile boolean execute;
