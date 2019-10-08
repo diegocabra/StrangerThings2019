@@ -6,7 +6,7 @@ import Principal.Celda;
 public class BotonDustin extends Boton {
 	
 	
-	public Dustin generateEntidad(Celda c) {
-		return new Dustin(c);}
+	public Dustin generateEntidad() {
+		return new Dustin();}
 	}
 

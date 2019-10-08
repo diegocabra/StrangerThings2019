@@ -10,5 +10,7 @@ public class Hopper extends Personaje {
 		//grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Eleven.png")));
 		
 	}
-	
+	public Hopper() {
+		super();
+	}
 }
