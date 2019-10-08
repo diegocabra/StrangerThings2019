@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.swing.border.EmptyBorder"/>
+<fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="Personajes.Eleven"/>
+<fullyQualifiedTypeName name="Principal.Celda"/>
+<fullyQualifiedTypeName name="Botonera.BotonEleven"/>
+<fullyQualifiedTypeName name="Botonera.Boton"/>
+<fullyQualifiedTypeName name="Personajes.Personaje"/>
+</qualifiedTypeNameHistroy>
