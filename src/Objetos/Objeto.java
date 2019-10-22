@@ -6,10 +6,11 @@ import Visitor.Visitor;
 
 public class Objeto extends Contenido{
 
-	Objeto(Celda c)
+	public Objeto(Celda c)
 	{
 		super(c);
 	}
+	
 	
 	public boolean aceptar(Visitor v)
 	{

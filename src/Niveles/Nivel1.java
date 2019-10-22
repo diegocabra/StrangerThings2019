@@ -4,7 +4,7 @@ import java.util.Random;
 import Enemigos.Enemigo;
 import Enemigos.Monstruo;
 import Objetos.Muro;
-import Personajes.Soldado_1;
+import Personajes.*;
 import Principal.Juego;
 import herramientas.Coleccion;
 import Principal.Celda;

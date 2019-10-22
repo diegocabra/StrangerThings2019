@@ -46,6 +46,7 @@ public abstract class Enemigo  extends Contenido{
 		if(miCelda!= null) {
 			//Juego j = miCelda.getMapa().getJuego();
 			super.destruir();
+			//aca generaria de manera random un powerUp en la misma celda que se ubicaba
 			
 		}
 	}
@@ -72,7 +73,7 @@ public abstract class Enemigo  extends Contenido{
 				}
 			}
 			if(mover && caminando) {
-				System.out.println("Continuo caminando");
+				//System.out.println("Continuo caminando");
 				caminar();
 				miCelda.setContenido(null);
 				miCelda = miCelda.getIzquierda();

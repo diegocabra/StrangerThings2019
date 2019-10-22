@@ -1,5 +1,6 @@
 package Personajes;
 
+import Disparos.GenerarBolaDeFuego;
 import Objetos.Contenido;
 import Principal.Celda;
 import Visitor.Visitor;
@@ -7,12 +8,15 @@ import Visitor.Visitor;
 public abstract class Personaje extends Contenido{
 	protected float danio;
 	protected boolean esperando;
-	
-	public Personaje (Celda c) {
-		super(c);
+	protected GenerarBolaDeFuego generarBolas;
+	public Personaje () {
+		super();
 		esperando = true;
 	}
 	
+	 public void setCelda(Celda c) {
+		 miCelda=c;
+	 }
 	 
 	public void setDanio (int f ) {
 		danio = f;
@@ -31,6 +35,9 @@ public abstract class Personaje extends Contenido{
 		return esperando;
 	}
 	
+	public int getCosto() {
+		return costo;
+	}
 	
 	public void destruir()
 	{

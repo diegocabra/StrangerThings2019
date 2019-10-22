@@ -10,7 +10,7 @@ import Enemigos.Monstruo;
 import Niveles.Nivel;
 import Niveles.Nivel1;
 import Objetos.Contenido;
-import Personajes.Soldado_1;
+import Personajes.Monje_1;
 import herramientas.Coleccion;
  
 
@@ -19,7 +19,7 @@ import herramientas.Coleccion;
 public class Juego {
 	
 	protected Nivel nivel;
-	protected int cantFilas,cantColumnas,monedas;
+	protected int cantFilas,cantColumnas;
 	protected  MapaGUI gui;
 	protected Mapa mapaCombate;
 	protected Coleccion<Enemigo> enemigos;
@@ -32,7 +32,7 @@ public class Juego {
 		
 		nivel = new Nivel1(this);
 		enemigos = new Coleccion<Enemigo>();
-		monedas = nivel.getMonedasIniciales();
+	
 		
 		
 		gui = new MapaGUI(this);
@@ -57,7 +57,7 @@ public class Juego {
 		return cantColumnas;
 	}
 	
-	//////////////////////////
+	
 	public void agregarEnemigo(Enemigo e) {
 		enemigos.add(e);		
 	}
@@ -80,14 +80,5 @@ public class Juego {
 		actualizar = new ActualizarGUI(gui);
 		actualizar.start();
 	}
-	
-	public int getMonedas()
-	{
-		return monedas;
-	}
-
-	public void decrementarMonedas(int m)
-	{
-		monedas-=m;
-	}
 }
+

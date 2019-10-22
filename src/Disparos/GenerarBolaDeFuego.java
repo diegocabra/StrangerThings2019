@@ -1,7 +1,7 @@
 package Disparos;
 
 import Personajes.Personaje;
-import Personajes.Soldado_1;
+import Personajes.Monje_1;
 import Principal.Celda;
 import Principal.Juego;
  

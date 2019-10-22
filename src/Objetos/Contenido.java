@@ -2,7 +2,6 @@ package Objetos;
 
 import javax.swing.JLabel;
 
-import Graficos.ContenidoGrafico;
 import Principal.Celda;
 import Visitor.Visitor;
 
@@ -18,6 +17,11 @@ public abstract class Contenido {
 		costo = 0;
 	}
 	
+	public Contenido() {
+		grafico= new JLabel();
+		vida=0;
+		costo=0;
+	}
 	public void decrementarVida(float f)
 	{
 		vida-=f;
@@ -58,7 +62,6 @@ public abstract class Contenido {
 			miCelda.setContenido(null);
 		
 	}
-	
 	public abstract boolean aceptar(Visitor v);
 		
 }

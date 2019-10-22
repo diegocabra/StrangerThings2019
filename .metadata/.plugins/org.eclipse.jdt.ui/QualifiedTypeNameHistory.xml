@@ -8,4 +8,7 @@
 <fullyQualifiedTypeName name="Botonera.BotonEleven"/>
 <fullyQualifiedTypeName name="Botonera.Boton"/>
 <fullyQualifiedTypeName name="Personajes.Personaje"/>
+<fullyQualifiedTypeName name="Principal.Market"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 </qualifiedTypeNameHistroy>
