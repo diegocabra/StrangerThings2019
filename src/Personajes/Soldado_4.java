@@ -7,7 +7,7 @@ import Principal.Celda;
 
 public class Soldado_4 extends Personaje {
 	protected GenerarBolaDeFuego generarBolas;
-	public Soldado_4(Celda c) {
+	public Soldado_4() {
 		super();
 		vida = 100;
 		costo = 50;

@@ -19,7 +19,7 @@ import herramientas.Coleccion;
 public class Juego {
 	
 	protected Nivel nivel;
-	protected int cantFilas,cantColumnas;
+	protected int cantFilas,cantColumnas, puntos;
 	protected  MapaGUI gui;
 	protected Mapa mapaCombate;
 	protected Coleccion<Enemigo> enemigos;
@@ -79,6 +79,17 @@ public class Juego {
 	{
 		actualizar = new ActualizarGUI(gui);
 		actualizar.start();
+	}
+	
+	public void incrementarPuntos(int p) {
+		puntos+=p;
+		
+	}
+
+
+	public void incrementarBomba() {
+		gui.incrementarBomba();
+		
 	}
 }
 

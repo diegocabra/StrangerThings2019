@@ -114,6 +114,10 @@ public class MapaGUI extends JFrame{
 	}
 
 
+	public void incrementarBomba(){
+		cantidadBombas++;
+	}
+
 
 
 

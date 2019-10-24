@@ -4,6 +4,8 @@ import Disparos.DisparoPersonaje;
 import Enemigos.Enemigo;
 import Objetos.Objeto;
 import Personajes.Personaje;
+import PowerUps.PowerUp;
+
 
 public class VisitorEnemigo implements Visitor {
 	
@@ -32,7 +34,6 @@ public class VisitorEnemigo implements Visitor {
 		p.decrementarVida(enemigo.getDanioAtaque());
 		enemigo.decrementarVida(p.getDanioAtaque());
 		
-		System.out.println("VIDA ALIEN:"+enemigo.getVida()+" -> VIDA SOLDADO"+p.getVida());
 		if(enemigo.getVida() <= 0) {
 			enemigo.destruir();
 			p.esperar();
@@ -64,14 +65,19 @@ public class VisitorEnemigo implements Visitor {
 			o.destruir();
 			enemigo.setCaminando(true);
 		}
-		 
+		
+		enemigo.setCaminando(true);
 		return true;
 	}
+	
 
-
-	@Override
 	public boolean visitarDisparoPersonaje(DisparoPersonaje dp) {
 		// TODO Auto-generated method stub
+		return false;
+	}
+	 
+	public boolean visitarPowerUP(PowerUp p) {
+		p.destruir();
 		return false;
 	}
 }

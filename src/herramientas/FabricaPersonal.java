@@ -11,23 +11,23 @@ import Principal.Celda;
 
 public class FabricaPersonal implements FabricaPersonajes{
 	
-	public Personaje crearSoldado1(Celda c) {
+	public Personaje crearMonje1() {
 		return new Monje_1();
 	}
 	
-	public Personaje crearSoldado2(Celda c) {
+	public Personaje crearMonje2() {
 		return new Monje_2();
 	}
 	
-	public Personaje crearSoldado3(Celda c) {
+	public Personaje crearMonje3() {
 		return new Monje_3();
 	}
 	
-	public Personaje crearSoldado4(Celda c) {
-		return new Soldado_4(c);
+	public Personaje crearSoldado4() {
+		return new Soldado_4();
 	}
 	
-	public Personaje crearSoldado5(Celda c) {
+	public Personaje crearSoldado5() {
 		return new Soldado_5();
 	}
 	

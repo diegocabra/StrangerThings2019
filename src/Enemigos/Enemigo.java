@@ -1,26 +1,35 @@
 package Enemigos;
-import java.util.Iterator;
+ 
 
+import java.util.Random;
+import Principal.Market;
 import Objetos.Contenido;
+import PowerUps.PowerUp;
 import Principal.Celda;
+import Principal.Juego;
 import Visitor.Visitor;
 import Visitor.VisitorEnemigo;
+import herramientas.Director;
  
 
 public abstract class Enemigo  extends Contenido{
 	protected MoverEnemigo moverme;
 	protected int danioAtaque,monedas,velocidad,puntos,posicion;
-	protected boolean caminando;
+	protected boolean caminando,bonus;
 	protected Visitor miVisitor;
-	
+	protected Director director;
+	protected Market market;
 	
 	public Enemigo(Celda c, boolean b) {
 		super(c);
+		market.getInstance();
 		caminando = true;
 		danioAtaque = 0;
 		puntos = 0;
-		posicion = 1;
 		miVisitor = new VisitorEnemigo(this);
+		bonus = b;
+		if(bonus) 
+			director = new Director();
 	}
 		
 	public int getVelocidad () {
@@ -43,10 +52,22 @@ public abstract class Enemigo  extends Contenido{
 	
 	public void destruir() {
 		moverme.terminate();
+		
 		if(miCelda!= null) {
-			//Juego j = miCelda.getMapa().getJuego();
+			Juego j = miCelda.getMapa().getJuego();
+			market.incrementarMonedas(monedas);
+			j.incrementarPuntos(puntos);
+			if(bonus) {
+				Random r = new Random();
+				PowerUp nuevo = director.crearPowerUP(miCelda, (r.nextInt(4)+1));
+				//PowerUp nuevo = director.crearPowerUP(miCelda, 3);
+				if(nuevo != null && miCelda != null) {
+					miCelda.agregar(nuevo);
+					j.agregar(nuevo);
+				}
+				
+			}
 			super.destruir();
-			//aca generaria de manera random un powerUp en la misma celda que se ubicaba
 			
 		}
 	}
@@ -64,6 +85,7 @@ public abstract class Enemigo  extends Contenido{
 		else {
 			while(cont<80 && mover) {
 				cont++;
+				//ver
 				siguiente = miCelda.getMapa().getCelda(miCelda.getFila(),miCelda.getColumna()-cont);
 				if(siguiente!=null) {
 					aux = siguiente.getContenido();
@@ -73,7 +95,6 @@ public abstract class Enemigo  extends Contenido{
 				}
 			}
 			if(mover && caminando) {
-				//System.out.println("Continuo caminando");
 				caminar();
 				miCelda.setContenido(null);
 				miCelda = miCelda.getIzquierda();
