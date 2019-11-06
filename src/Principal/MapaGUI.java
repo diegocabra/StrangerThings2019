@@ -28,6 +28,8 @@ public class MapaGUI extends JFrame{
 	protected Boton BotonMonje1;
 	protected Boton BotonMonje2;
 	protected Boton BotonMonje3;
+	protected Boton BotonMonje4;
+	protected Boton BotonMonje5;
 	protected Market market;
 
 
@@ -88,11 +90,20 @@ public class MapaGUI extends JFrame{
 		BotonMonje1 =new BotonMonje_1();
 		BotonMonje2 = new BotonMonje_2();
 		BotonMonje3 =new BotonMonje_3();
+		BotonMonje4 =new BotonMonje_4();
+		BotonMonje5= new BotonMonje_5();
 		panelOpciones.add(BotonMonje1);
 		panelOpciones.add(BotonMonje2);
 		panelOpciones.add(BotonMonje3);
-
-
+		panelOpciones.add(BotonMonje4);
+		panelOpciones.add(BotonMonje5);
+		//JButton boton = new JButton();
+	//	new ImageIcon(this.getClass().getResource("/Sprites/muro.png");
+		//ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/Face_1.png"));
+	//	boton.setIcon(iconobtn);
+	//	panelOpciones.add(boton);
+		//boton.setBounds(000, 30, 90, 90);
+	//	new javax.swing.ImageIcon(getClass().getResource("/iconos/action_button_cancel.png")
 		etiquetaMarket = new JLabel("MarketPlace");
 		etiquetaMarket.setBounds(120, 0, 500, 25);
 		etiquetaInformacion = new JLabel("");
