@@ -3,9 +3,12 @@ import java.util.Random;
 
 import Enemigos.Enemigo;
 import Enemigos.Monstruo;
+import Objetos.Agua;
+import Objetos.Contenido;
 import Objetos.Muro;
-import Personajes.*;
+import Objetos.Objeto;
 import Principal.Juego;
+ 
 import herramientas.Coleccion;
 import Principal.Celda;
 public class Nivel1 extends Nivel{
@@ -16,81 +19,69 @@ public class Nivel1 extends Nivel{
 		juego = l;
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "MMMM";
+		String s = "MMMMMMMMMMMM";
 		Oleadas.add(s);
 
 	}
-
-	//OLEADAS
-	/*
+ 
 	public void run () {
-		
-		Random r1 = new Random();
-		int Rnd1 = r1.nextInt(juego.getFilas());
 		try {
-			for(String s:Oleadas) {
-				sleep(5000);
-				
-				for(int i =0;i<s.length();i++) {
-					Rnd1 = r1.nextInt(juego.getFilas());
-					Celda celda = juego.getMap().getCelda(Rnd1, juego.getColumnas()-1);
-					Enemigo monstruo = new Monstruo(celda,false);
-					char Proximo = s.charAt(i);
 					
-					celda.agregar(monstruo);
-					juego.agregar(monstruo);
-					juego.agregarEnemigo(monstruo);
-					sleep(8000);
-				}
-			}
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
-	}
-	
-	*/
-	public void run () {
-		try {
+			Random r1 = new Random();
+			int random1 = r1.nextInt(juego.getFilas());
+			int random2 =  r1.nextInt(juego.getColumnas()-80);
 			
-			/*
-			Celda celdaEleven = juego.getMap().getCelda(0, 6*80);
-			Eleven el = new Eleven(celdaEleven);
-			celdaEleven.agregar(el);
-			juego.agregar(el);
-			*/
+			if(random2<100 && juego.getColumnas()>100)
+				random2+=100;
 			
-			Celda celdaMuro = juego.getMap().getCelda(2,5*80);
-			Muro muro = new Muro(celdaMuro);
-			celdaMuro.agregar(muro);
+			Objeto muro = new Muro(juego.getMap().getCelda(random1,random2));
+			juego.getMap().getCelda(random1,random2).agregar(muro);
 			juego.agregar(muro);
 			
-			Celda celdaMuro2 = juego.getMap().getCelda(1,5*80);
-			Muro muro2 = new Muro(celdaMuro2);
-			celdaMuro2.agregar(muro2);
-			juego.agregar(muro2);
 			
+			random1 = r1.nextInt(juego.getFilas());
+			random2 =  r1.nextInt(juego.getColumnas()-80);
 			
-			Random r1 = new Random();
-			//int Rnd1 = r1.nextInt(juego.getFilas());
-			Celda celda = juego.getMap().getCelda(3, 7*80);
-			Enemigo monstruo = new Monstruo(celda,false);			
-			celda.agregar(monstruo);
-			juego.agregar(monstruo);
-			juego.agregarEnemigo(monstruo);
+			if(random2<100 && juego.getColumnas()>100)
+				random2+=100;
 			
-			
-			Celda celda2 = juego.getMap().getCelda(1, 8*80);
-			Enemigo monstruo2 = new Monstruo(celda2,false);			
-			celda2.agregar(monstruo2);
-			juego.agregar(monstruo2);
-			juego.agregarEnemigo(monstruo2);
-			
-			
+			Objeto agua = new Agua(juego.getMap().getCelda(random1,random2));
+			juego.getMap().getCelda(random1, random2).agregar(agua);
+			juego.agregar(agua);
 			
 			 
-			sleep(8000);
-				 
+			for(String s:Oleadas) {
+				sleep(5000);
+				for(int i = 0;i<s.length();i++) {
+					random1 = r1.nextInt(juego.getFilas());
+					Celda celda = juego.getMap().getCelda(random1,juego.getColumnas()-1);
+					Enemigo nuevo = null;
+					char Proximo = s.charAt(i);
+					
+					boolean powerUp = false;
+					random1 = r1.nextInt(100);
+					if(random1 %5 == 0)
+						powerUp = true;
+					
+					switch (Proximo) {
+	                case 'M':  nuevo = new Monstruo(celda,powerUp);
+	                         break;
+	                case 'O':  nuevo = new Monstruo(celda,powerUp);
+	                         break;
+	                case 'D':  nuevo = new Monstruo(celda,powerUp);
+	                         break;
+	                case 'C':  nuevo = new Monstruo(celda,powerUp);
+	                		 break;
+	                case 'H':  nuevo = new Monstruo(celda,powerUp);
+	       		 			 break;
+	            	}
+					celda.agregar(nuevo);
+					juego.agregar(nuevo);
+					juego.agregarEnemigo(nuevo);
+					sleep(8000);
+					
+				}
+			}				 
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

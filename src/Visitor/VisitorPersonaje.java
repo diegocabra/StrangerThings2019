@@ -4,6 +4,7 @@ import Disparos.DisparoPersonaje;
 import Enemigos.Enemigo;
 import Objetos.Objeto;
 import Personajes.Personaje;
+import PowerUps.PowerUp;
 
 public class VisitorPersonaje implements Visitor {
 	protected Personaje personaje;
@@ -13,7 +14,6 @@ public class VisitorPersonaje implements Visitor {
 	}
 	
 	public boolean visitarEnemigo(Enemigo e) {
-		System.out.print("SOLDADO COMBATIENDO");
 		e.decrementarVida(personaje.getDanioAtaque());
 		if(e.getVida() <=0) 
 			e.destruir();
@@ -23,7 +23,6 @@ public class VisitorPersonaje implements Visitor {
 
 	 
 	public boolean visitarPersonaje(Personaje p) {
-		//Esperar a combate
 		return false;
 	}
 
@@ -36,6 +35,12 @@ public class VisitorPersonaje implements Visitor {
 	 
 	public boolean visitarDisparoPersonaje(DisparoPersonaje dp) {
 		// TODO Auto-generated method stub
+		return false;
+	}
+
+	 
+	public boolean visitarPowerUP(PowerUp p) {
+	 
 		return false;
 	}
 

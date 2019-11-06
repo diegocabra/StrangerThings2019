@@ -5,10 +5,10 @@ import Principal.Celda;
 
 public interface FabricaPersonajes {
 
-	public Personaje crearSoldado1(Celda c);
-	public Personaje crearSoldado2(Celda c);
-	public Personaje crearSoldado3(Celda c);
-	public Personaje crearSoldado4(Celda c);
-	public Personaje crearSoldado5(Celda c);
+	public Personaje crearMonje1();
+	public Personaje crearMonje2();
+	public Personaje crearMonje3();
+	public Personaje crearSoldado4();
+	public Personaje crearSoldado5();
 
 }

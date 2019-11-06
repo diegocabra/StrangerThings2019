@@ -4,6 +4,7 @@ import Disparos.DisparoPersonaje;
 import Enemigos.Enemigo;
 import Objetos.Objeto;
 import Personajes.Personaje;
+import PowerUps.PowerUp;
 
 public class VisitorDisparoPersonaje implements Visitor {
 
@@ -35,16 +36,17 @@ public class VisitorDisparoPersonaje implements Visitor {
 		return true;
 	}
 	
-	/*
-	public boolean visitarDisparoEnemigo(DisparoEnemigo de)
-	{
-		return false;
-	}
-	*/
 	
 	public boolean visitarDisparoPersonaje(DisparoPersonaje dp)
 	{
 		return false;
 	}
+	
+	public boolean visitarPowerUP(PowerUp p) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	 
 }
 

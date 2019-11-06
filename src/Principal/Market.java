@@ -44,14 +44,16 @@ public class Market {
 		return toreturn;
 	}
 
-	public int getMonedas()
-	{
+	public int getMonedas(){
 		return monedas;
 	}
 
-	public void decrementarMonedas(int m)
-	{
+	public void decrementarMonedas(int m){
 		monedas-=m;
+	}
+	
+	public void incrementarMonedas(int m) {
+		monedas+=m;
 	}
 }
 

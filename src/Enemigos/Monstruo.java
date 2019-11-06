@@ -13,8 +13,9 @@ public class Monstruo  extends Enemigo{
 		danioAtaque = 3;
 		velocidad = 10;
 		puntos = 150;
+		monedas = 100;
 		
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Robot_1_caminando.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
 		
 		moverme = new MoverEnemigo(this);
 		moverme.start();
@@ -22,13 +23,13 @@ public class Monstruo  extends Enemigo{
 	
 	public void caminar() {
 		caminando = true;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Robot_1_caminando.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
 		
 	}
 	
 	public void atacar() {
 		caminando = false;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Robot_1_atacando.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_atacando_2.gif")));
 	}
 	
 	public void destruir() {

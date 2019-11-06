@@ -18,7 +18,7 @@ public abstract class Personaje extends Contenido{
 		 miCelda=c;
 	 }
 	 
-	public void setDanio (int f ) {
+	public void setDanio (float f ) {
 		danio = f;
 	}
 	
