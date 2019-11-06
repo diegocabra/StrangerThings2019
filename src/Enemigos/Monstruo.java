@@ -13,6 +13,7 @@ public class Monstruo  extends Enemigo{
 		danioAtaque = 3;
 		velocidad = 10;
 		puntos = 150;
+		monedas = 100;
 		
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
 		

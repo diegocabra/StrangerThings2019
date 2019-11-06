@@ -55,7 +55,7 @@ public abstract class Enemigo  extends Contenido{
 		
 		if(miCelda!= null) {
 			Juego j = miCelda.getMapa().getJuego();
-			market.incrementarMonedas(monedas);
+			//market.incrementarMonedas(monedas);
 			j.incrementarPuntos(puntos);
 			if(bonus) {
 				Random r = new Random();
@@ -80,7 +80,7 @@ public abstract class Enemigo  extends Contenido{
 		Contenido aux;
 		
 		if(siguiente == null) {
-			//Terminar juego
+			miCelda.getMapa().getJuego().terminarJuego(false);
 		}
 		else {
 			while(cont<80 && mover) {
