@@ -21,14 +21,17 @@ public class Juego {
 	protected Nivel nivel;
 	protected int cantFilas,cantColumnas, puntos;
 	protected  MapaGUI gui;
+	protected boolean terminarJuego;
 	protected Mapa mapaCombate;
 	protected Coleccion<Enemigo> enemigos;
 	protected ActualizarGUI actualizar;
 	
+	
 	public Juego (int f, int c) {
 		cantFilas = f;
 		cantColumnas = c*80;
-		mapaCombate = new Mapa(cantFilas,cantColumnas,this);		
+		mapaCombate = new Mapa(cantFilas,cantColumnas,this);
+		terminarJuego = false;
 		
 		nivel = new Nivel1(this);
 		enemigos = new Coleccion<Enemigo>();
@@ -39,6 +42,25 @@ public class Juego {
 		//insertarEnemigos();
 		nivel.start();
 		actualizar();
+		
+	}
+	
+	public Juego(Nivel n,int p, int f, int c) {
+		terminarJuego = false;
+		cantFilas = f;
+		cantColumnas = c*80;
+		mapaCombate = new Mapa(cantFilas,cantColumnas,this);
+		
+		nivel = n;
+		n.setJuego(this);
+		puntos = p;
+		//monedas = nivel.getMonedasIniciales();
+		
+		enemigos = new Coleccion<Enemigo>();
+		gui = new MapaGUI(this);
+		nivel.start();
+		actualizar();
+		
 		
 	}
 	
@@ -62,6 +84,11 @@ public class Juego {
 		enemigos.add(e);		
 	}
 	
+	public void eliminarEnemigo(Enemigo e) {
+		enemigos.remove(e);
+		if (enemigos.isEmpty())
+			finalizarJuego(true);
+	}
 	public void agregar(Contenido c) {
 		if(c.getGrafico() != null) {
 			gui.agregar(c.getGrafico());
@@ -90,6 +117,24 @@ public class Juego {
 	public void incrementarBomba() {
 		gui.incrementarBomba();
 		
+	}
+	
+	public void finalizarJuego (boolean win) {
+		if(!terminarJuego) {
+			terminarJuego = true;
+			int puntosAux = puntos;
+			actualizar.terminate();
+			boolean JugarDeNuevo = gui.terminar(win);
+			
+			if(JugarDeNuevo) {
+				if(win) {
+					new Juego(nivel.siguienteNivel(),puntosAux,cantFilas,cantColumnas/80);
+				}
+				else {
+					new Juego(nivel.reiniciarNivel(),0,cantFilas,cantColumnas/80);
+				}
+			}
+		}
 	}
 }
 

@@ -1,27 +1,32 @@
 package Niveles;
+
+ 
+ 
 import java.util.Random;
 
 import Enemigos.Enemigo;
 import Enemigos.Monstruo;
+import Enemigos.MonstruoCinco;
+import Enemigos.MonstruoCuatro;
 import Enemigos.MonstruoDos;
 import Enemigos.MonstruoTres;
 import Objetos.Agua;
-import Objetos.Contenido;
+ 
 import Objetos.Muro;
 import Objetos.Objeto;
 import Principal.Juego;
  
 import herramientas.Coleccion;
 import Principal.Celda;
-public class Nivel1 extends Nivel{
+public class Nivel2 extends Nivel{
 	
 	protected Coleccion<String> Oleadas;
 	
-	public Nivel1(Juego j) {
-		juego = j;
+	public Nivel2(Juego l) {
+		juego = l;
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "321";
+		String s = "354";
 		Oleadas.add(s);
 
 	}
@@ -72,7 +77,10 @@ public class Nivel1 extends Nivel{
 	                         break;
 	                case '3':  nuevo = new MonstruoTres(celda,powerUp);
 	                         break;
-	            
+	                case '4':  nuevo = new MonstruoCuatro(celda,powerUp);
+	                		 break;
+	                case '5':  nuevo = new MonstruoCinco(celda,powerUp);
+	       		 			 break;
 	            	}
 					celda.agregar(nuevo);
 					juego.agregar(nuevo);
@@ -92,12 +100,12 @@ public class Nivel1 extends Nivel{
 	
 	
 	public Nivel siguienteNivel() {
-		return new Nivel2(null);
+		return null;
 	}
 
 	 
 	public Nivel reiniciarNivel() {
-		return new Nivel1(null);
+		return new Nivel2(null);
 	}
 
 }

@@ -3,19 +3,19 @@ package Enemigos;
 import javax.swing.ImageIcon;
 
 import Principal.Celda;
-import Visitor.Visitor;
+ 
 
-public class Monstruo  extends Enemigo{
+public class MonstruoTres  extends Enemigo{
 	
-	public Monstruo (Celda c, boolean b) {
+	public MonstruoTres (Celda c, boolean b) {
 		super(c,b);
 		vida = 100;
-		danioAtaque = 1;
-		velocidad = 5;
-		puntos = 50;
-		monedas = 50;
+		danioAtaque = 3;
+		velocidad = 20;
+		puntos = 200;
+		monedas = 100;
 		
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_1.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
 		
 		moverme = new MoverEnemigo(this);
 		moverme.start();
@@ -23,7 +23,7 @@ public class Monstruo  extends Enemigo{
 	
 	public void caminar() {
 		caminando = true;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_1.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
 		
 	}
 	

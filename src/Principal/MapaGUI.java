@@ -207,6 +207,36 @@ public class MapaGUI extends JFrame{
 		}
 	}
 
+	public boolean terminar(boolean gano)
+	{
+		
+		boolean respuesta=false;
+		
+		if(gano)
+		{
+			int seleccion = JOptionPane.showOptionDialog( null,"¡GANASTE! :D",
+					  "Selector de opciones",JOptionPane.YES_NO_CANCEL_OPTION,
+					   JOptionPane.QUESTION_MESSAGE,null,// null para icono por defecto.
+					  new Object[] { "Siguiente Nivel", "Cerrar"},"Siguiente Nivel");
+					      
+			if(seleccion==0) respuesta = true;
+			else respuesta = false;
+		}
+		else
+		{
+			int seleccion = JOptionPane.showOptionDialog( null,"¡PERDISTE! :(",
+					  "Selector de opciones",JOptionPane.YES_NO_CANCEL_OPTION,
+					   JOptionPane.QUESTION_MESSAGE,null,// null para icono por defecto.
+					  new Object[] { "Jugar de Nuevo", "Cerrar"},"Jugar de Nuevo");
+					      
+			if(seleccion==0) respuesta = true;
+			else respuesta = false;
+		}
+		
+		this.dispose();
+		return respuesta;
+	}
+	
 
 
 }
