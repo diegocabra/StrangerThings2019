@@ -118,6 +118,11 @@ public class Juego {
 		gui.incrementarBomba();
 		
 	}
+	/*
+	public void obtuvePowerUp() {
+		gui.activarPowerUp();
+	}
+	*/
 	
 	public void finalizarJuego (boolean win) {
 		if(!terminarJuego) {

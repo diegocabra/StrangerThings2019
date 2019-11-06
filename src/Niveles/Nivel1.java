@@ -60,7 +60,7 @@ public class Nivel1 extends Nivel{
 					Enemigo nuevo = null;
 					char Proximo = s.charAt(i);
 					
-					boolean powerUp = false;
+					boolean powerUp = true; //NO OLVIDADRSE
 					random1 = r1.nextInt(100);
 					if(random1 %5 == 0)
 						powerUp = true;

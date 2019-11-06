@@ -184,6 +184,17 @@ public class MapaGUI extends JFrame{
 				}
 			}
 		}
+		/*
+		etiquetaPuntos.setText("Puntos: "+juego.getPuntos());
+		etiquetaMonedas.setText("Monedas: "+juego.getMonedas());
+		*/
+		if(cantidadBombas>0) 
+			btnBombas.setEnable(true);
+		else
+			btnBombas.setEnable(false);
+
+		
+		
 	}
 
 	private void inicializarPanelJuego() {
@@ -237,6 +248,9 @@ public class MapaGUI extends JFrame{
 		return respuesta;
 	}
 	
+	public void activarPowerUp() {
+		
+	}
 
 
 }
