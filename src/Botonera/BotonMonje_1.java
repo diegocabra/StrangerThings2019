@@ -15,15 +15,10 @@ public class BotonMonje_1 extends Boton {
 	public BotonMonje_1() {
 		market = Market.getInstance();
 		this.addActionListener(new OyenteBotonmonje1());
-		this.setBounds(100, 20, 90, 90);
-		//this.setText("222222221");
-		JLabel botoncito= new JLabel();
-		ImageIcon iconobtn = new ImageIcon("/Sprites/muro.png");
-	//	botoncito.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/muro.png")));
+		this.setBounds(100,20, 60, 50);
+		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/Face_1_open.png"));
 		this.setIcon(iconobtn);
-		//setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Monje_1_Atacando.gif"
-		//this.setRolloverIcon (new ImageIcon("/src/Sprites/Face_1.png"));
-		//Boton.setPressedIcon (new ImageIcon("abre.gif"));
+	
 	}
 	
 	public Personaje generateEntidad() {

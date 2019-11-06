@@ -55,8 +55,9 @@ public abstract class Enemigo  extends Contenido{
 		
 		if(miCelda!= null) {
 			Juego j = miCelda.getMapa().getJuego();
-			market.incrementarMonedas(monedas);
+			//market.incrementarMonedas(monedas);
 			j.incrementarPuntos(puntos);
+			j.eliminarEnemigo(this);
 			if(bonus) {
 				Random r = new Random();
 				PowerUp nuevo = director.crearPowerUP(miCelda, (r.nextInt(4)+1));
@@ -80,7 +81,7 @@ public abstract class Enemigo  extends Contenido{
 		Contenido aux;
 		
 		if(siguiente == null) {
-			//Terminar juego
+			miCelda.getMapa().getJuego().finalizarJuego(false);
 		}
 		else {
 			while(cont<80 && mover) {
