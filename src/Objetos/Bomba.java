@@ -16,6 +16,7 @@ public class Bomba extends Objeto {
 	{
 		super();
 		vida = 100;
+		costo = 2;
 		
 		
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/bomba.gif")));
@@ -42,6 +43,7 @@ public class Bomba extends Objeto {
 	
 	public void setCelda(Celda c) {
 		miCelda=c;
+		estallar = new Estallar(this,miCelda);
 		estallar.start();
 	}
 	

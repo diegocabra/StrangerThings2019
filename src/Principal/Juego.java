@@ -116,16 +116,6 @@ public class Juego {
 		return puntos;
 	}
 
-
-	public void incrementarBomba() {
-		gui.incrementarBomba();
-		
-	}
-	/*
-	public void obtuvePowerUp() {
-		gui.activarPowerUp();
-	}
-	*/
 	
 	public void finalizarJuego (boolean win) {
 		if(!terminarJuego) {

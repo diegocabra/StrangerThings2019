@@ -8,6 +8,7 @@ public class Market {
 	protected int monedas;
 	protected static Market m;
 	public final int monedasInicio=250;
+	protected int cantidadBombas;
 	
 	public static Market getInstance() {
 		if(m == null) {
@@ -19,6 +20,7 @@ public class Market {
 	private Market() {
 		monedas=monedasInicio;
 		fabricado=null;
+		cantidadBombas=0;
 	}
 
 
@@ -56,5 +58,27 @@ public class Market {
 	public void incrementarMonedas(int m) {
 		monedas+=m;
 	}
+
+	public void incrementarBomba(){
+		cantidadBombas++;
+	}
+	
+	public void decrementarBomba() {
+		cantidadBombas--;
+	}
+	public int getCantidadBombas() {
+		return cantidadBombas;
+	}
+	
+	public boolean alcanzaBomba() {
+		boolean	toreturn=false;
+	if (fabricado.getCosto()<=getCantidadBombas())// alcanza(); habilita oro 
+		toreturn=true;
+	return toreturn;
 }
+	
+	
+}
+
+
 

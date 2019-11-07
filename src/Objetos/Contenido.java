@@ -59,8 +59,10 @@ public abstract class Contenido {
 			grafico.setIcon(null);
 			grafico=null;
 		}
+	
 		if(miCelda != null)
 			miCelda.setContenido(null);
+		
 		
 	}
 	public abstract boolean aceptar(Visitor v);

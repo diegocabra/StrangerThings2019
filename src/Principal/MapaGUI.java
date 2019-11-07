@@ -13,7 +13,7 @@ import Botonera.*;
 
 public class MapaGUI extends JFrame{
 
-	protected int cantFilas,cantColumnas,alto,ancho,fabricado,cantidadBombas;	
+	protected int cantFilas,cantColumnas,alto,ancho,fabricado;	
 
 
 	protected Juego juego;
@@ -83,6 +83,7 @@ public class MapaGUI extends JFrame{
 		panelOpciones.setLayout(null);
 		panelOpciones.setBorder(BorderFactory.createLineBorder(Color.black));
 		panelOpciones.setBounds(0,0, ancho, 160);
+		
 		/*---------------------------------Botones Monje 1-2-3 ------------------------------------*/
 		BotonMonje1 =new BotonMonje_1();
 		BotonMonje2 = new BotonMonje_2();
@@ -104,7 +105,7 @@ public class MapaGUI extends JFrame{
 		etiquetaPW.setBounds(100, 55, 70, 50);
 		panelOpciones.add(etiquetaPW);
 		
-		etiquetaCantBombas = new JLabel(""+cantidadBombas);
+		etiquetaCantBombas = new JLabel(""+market.getCantidadBombas());
 		etiquetaCantBombas.setBounds(125,128,40,40);
 		panelOpciones.add(etiquetaCantBombas);
 		
@@ -138,11 +139,7 @@ public class MapaGUI extends JFrame{
 
 	
 
-	public void incrementarBomba(){
-		cantidadBombas++;
-	}
 	
-	 
 
 	private class OyentePanelMouse implements MouseListener {		
 		public void mousePressed(MouseEvent e)
@@ -209,6 +206,7 @@ public class MapaGUI extends JFrame{
 		}
 		
 		etiquetaPuntos.setText("Puntos: "+juego.getPuntos());
+		etiquetaCantBombas.setText(""+market.getCantidadBombas());
 		
 
 	}
