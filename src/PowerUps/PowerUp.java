@@ -18,51 +18,43 @@ public abstract class PowerUp extends Contenido{
 	}
 	
 	public void comprobar(){
-		boolean comprobar = true;
-		boolean parar = false;
-		Celda sig;;
+
+		
+		boolean mover = true;
+		Celda siguiente = miCelda.getIzquierda();
 		int cont = 0;
 		Contenido aux;
-		
-		if(miCelda!=null){
-			while(cont<80 && !parar){
-				cont++;
-				sig = miCelda.getMapa().getCelda(miCelda.getFila(), miCelda.getColumna()-cont);
-				aux = sig.getContenido();
-				if(aux!=null){
-					if(aux!=null && aux.aceptar(miVisitor)){
-						comprobar = false;
-						parar=true;
-					}
-				}
-				else{
-					parar = true;
-				}
-			}
-
-			parar=false;
-			
-			if(comprobar){
-				cont=0;
-				while(cont<80 && !parar){
-					cont++;
-					sig = miCelda.getMapa().getCelda(miCelda.getFila(), miCelda.getColumna()+cont);
-					aux = sig.getContenido();
-					if(aux!=null){
-						if(aux!=null && aux.aceptar(miVisitor)){
-							comprobar = false;
-							parar=true;
-							}
-					}
-					else{
-						parar=true;
-					}
-				}
-			}
-			if(!comprobar){
-				this.destruir();
-			}
+		boolean encontre=false;
+		if(siguiente == null) {
+			encontre=false;
+			// miCelda.getMapa().getJuego().finalizarJuego(false);
 		}
+		else {
+			while(cont<80 && !encontre) {
+				cont++;
+				//ver
+				siguiente = miCelda.getMapa().getCelda(miCelda.getFila(),miCelda.getColumna()-cont);
+				if(siguiente!=null) {
+					aux = siguiente.getContenido();
+					if(aux !=null ) {
+						aux.aceptar(miVisitor);
+						System.out.println("Encontre alguien wachin");
+						encontre=true;
+						entregarPW.terminate();
+						//mover = false;
+						
+					}
+				}
+			}
+	//		if(mover && caminando) {
+		//		caminar();
+			//	miCelda.setContenido(null);
+				//miCelda = miCelda.getIzquierda();
+				//if(miCelda != null)
+					//miCelda.setContenido(this);
+		//	}
+		}
+		
 	}
 	
 	

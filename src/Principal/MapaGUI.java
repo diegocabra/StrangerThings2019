@@ -198,12 +198,12 @@ public class MapaGUI extends JFrame{
 		/*
 		etiquetaPuntos.setText("Puntos: "+juego.getPuntos());
 		etiquetaMonedas.setText("Monedas: "+juego.getMonedas());
-		*/
+		
 		if(cantidadBombas>0) 
 			btnBombas.setEnable(true);
 		else
 			btnBombas.setEnable(false);
-
+*/
 		
 		
 	}

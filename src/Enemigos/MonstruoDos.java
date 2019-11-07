@@ -15,7 +15,7 @@ public class MonstruoDos  extends Enemigo{
 		puntos = 100;
 		monedas = 100;
 		
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/goblin_atacando_2.gif")));
 		
 		moverme = new MoverEnemigo(this);
 		moverme.start();
@@ -23,13 +23,13 @@ public class MonstruoDos  extends Enemigo{
 	
 	public void caminar() {
 		caminando = true;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/goblin_caminando_2.gif")));
 		
 	}
 	
 	public void atacar() {
 		caminando = false;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_atacando_2.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/goblin_atacando_2.gif")));
 	}
 	
 	public void destruir() {

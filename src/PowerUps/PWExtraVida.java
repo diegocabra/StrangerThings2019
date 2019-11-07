@@ -12,8 +12,9 @@ public class PWExtraVida extends PowerUp{
 	}
 	
 	public void getPowerUp(Personaje p) {
-		System.out.println("Entre a duplicar vida ---------------------------------");
-		p.setVida(p.getVida()*200);
+		System.out.println("Entre a duplicar vida -----MI vida antes era:"+p.getVida());
+		p.setVida(p.getVida()*2);
+		System.out.println("Mi vida ahora es "+p.getVida());
 	}
 
 }
