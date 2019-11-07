@@ -22,6 +22,7 @@ public class Estallar extends Thread{
 			e.printStackTrace();
 		}
 		
+		
 		boolean parar = false;
 		Celda siguiente;
 		int cont = 0;
@@ -35,6 +36,7 @@ public class Estallar extends Thread{
 				if(siguiente!=null) {
 					aux = siguiente.getContenido();
 					if(aux !=null ) {
+						System.out.println("----Entre a estallar");
 						aux.destruir();
 						//mover = false;
 						

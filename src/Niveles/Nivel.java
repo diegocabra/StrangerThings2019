@@ -19,3 +19,4 @@ public abstract class Nivel extends Thread {
 		return monedasIniciales;
 	}
 }
+//asdasd
