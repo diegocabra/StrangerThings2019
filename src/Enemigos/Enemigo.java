@@ -22,7 +22,7 @@ public abstract class Enemigo  extends Contenido{
 	
 	public Enemigo(Celda c, boolean b) {
 		super(c);
-		market.getInstance();
+		market=Market.getInstance();
 		caminando = true;
 		danioAtaque = 0;
 		puntos = 0;
@@ -55,8 +55,8 @@ public abstract class Enemigo  extends Contenido{
 		
 		if(miCelda!= null) {
 			Juego j = miCelda.getMapa().getJuego();
-			//market.incrementarMonedas(monedas);
-			j.incrementarPuntos(puntos);
+			market.incrementarMonedas(monedas);
+	
 			j.eliminarEnemigo(this);
 			if(bonus) {
 				Random r = new Random();
@@ -71,6 +71,7 @@ public abstract class Enemigo  extends Contenido{
 			super.destruir();
 			
 		}
+		
 	}
 	
 	public void mover() {

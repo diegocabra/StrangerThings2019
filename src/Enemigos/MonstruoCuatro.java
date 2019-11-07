@@ -15,7 +15,7 @@ public class MonstruoCuatro  extends Enemigo{
 		puntos = 200;
 		monedas = 100;
 		
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_4.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Golem_caminando.gif")));
 		
 		moverme = new MoverEnemigo(this);
 		moverme.start();
@@ -23,18 +23,18 @@ public class MonstruoCuatro  extends Enemigo{
 	
 	public void caminar() {
 		caminando = true;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_4.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Golem_caminando.gif")));
 		
 	}
 	
 	public void atacar() {
 		caminando = false;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_atacando_4.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Golem_caminando.gif")));
 	}
 	
 	public void destruir() {
 		super.destruir();
-		//grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_muriendo_2.gif")));
+	
 	}
 
 	  

@@ -207,8 +207,13 @@ public class MapaGUI extends JFrame{
 			btnBombas.setEnable(true);
 		else
 			btnBombas.setEnable(false);
+<<<<<<< HEAD
 
 		*/
+=======
+*/
+		
+>>>>>>> 7a0af234b147b5534643380177b59bdf427d86c3
 		
 	}
 
