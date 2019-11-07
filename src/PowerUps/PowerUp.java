@@ -38,21 +38,16 @@ public abstract class PowerUp extends Contenido{
 					aux = siguiente.getContenido();
 					if(aux !=null ) {
 						aux.aceptar(miVisitor);
-						System.out.println("Encontre alguien wachin");
+						//System.out.println("Encontre alguien wachin");
 						encontre=true;
 						entregarPW.terminate();
+						this.destruir();
 						//mover = false;
 						
 					}
 				}
 			}
-	//		if(mover && caminando) {
-		//		caminar();
-			//	miCelda.setContenido(null);
-				//miCelda = miCelda.getIzquierda();
-				//if(miCelda != null)
-					//miCelda.setContenido(this);
-		//	}
+ 
 		}
 		
 	}

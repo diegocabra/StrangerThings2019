@@ -24,12 +24,9 @@ public class MapaGUI extends JFrame{
 	protected JPanel panel_2;
 	protected JPanel panel_3;
 
-	protected JLabel etiqueta,etiquetaPuntos,etiquetaMonedas,etiquetaInformacion,etiquetaMarket;
-	protected Boton BotonMonje1;
-	protected Boton BotonMonje2;
-	protected Boton BotonMonje3;
-	protected Boton BotonMonje4;
-	protected Boton BotonMonje5;
+	protected JLabel etiqueta,etiquetaPuntos,etiquetaMonedas,etiquetaInformacion,etiquetaMarket,etiquetaPW,etiquetaCantBombas;
+	protected Boton BotonMonje1,BotonMonje2,BotonMonje3,BotonMonje4,BotonMonje5;
+	protected JButton botonBomba,botonMuro;
 	protected Market market;
 
 
@@ -97,6 +94,28 @@ public class MapaGUI extends JFrame{
 		panelOpciones.add(BotonMonje3);
 		panelOpciones.add(BotonMonje4);
 		panelOpciones.add(BotonMonje5);
+		
+		/*-------------------------------- Botones PW -------------------------------------------*/
+		
+		botonBomba = new JButton();
+		botonBomba.setBounds(100,90, 60, 50);
+		panelOpciones.add(botonBomba);
+		ImageIcon iconbomba = new ImageIcon(this.getClass().getResource("/Sprites/bomba.gif"));
+		botonBomba.setIcon(iconbomba);
+		botonBomba.setEnabled(false);
+		
+		etiquetaPW = new JLabel("PowerUps");
+		etiquetaPW.setBounds(100, 55, 70, 50);
+		panelOpciones.add(etiquetaPW);
+		
+		etiquetaCantBombas = new JLabel(""+cantidadBombas);
+		etiquetaCantBombas.setBounds(125,128,40,40);
+		panelOpciones.add(etiquetaCantBombas);
+		
+		
+		/*---------------------------------------------------------------------------------------*/
+		
+		
 		//JButton boton = new JButton();
 	//	new ImageIcon(this.getClass().getResource("/Sprites/muro.png");
 		//ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/Face_1.png"));
@@ -105,7 +124,7 @@ public class MapaGUI extends JFrame{
 		//boton.setBounds(000, 30, 90, 90);
 	//	new javax.swing.ImageIcon(getClass().getResource("/iconos/action_button_cancel.png")
 		etiquetaMarket = new JLabel("MarketPlace");
-		etiquetaMarket.setBounds(120, 0, 500, 25);
+		etiquetaMarket.setBounds(100, 0, 500, 25);
 		etiquetaInformacion = new JLabel("");
 		etiquetaInformacion.setBounds(5, 140, 500, 25);
 		etiquetaMonedas = new JLabel("Monedas: "+market.getMonedas());
@@ -210,11 +229,7 @@ public class MapaGUI extends JFrame{
 <<<<<<< HEAD
 
 		*/
-=======
-*/
-		
->>>>>>> 7a0af234b147b5534643380177b59bdf427d86c3
-		
+
 	}
 
 	private void inicializarPanelJuego() {

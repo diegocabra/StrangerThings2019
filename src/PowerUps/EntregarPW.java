@@ -18,7 +18,7 @@ public class EntregarPW extends Thread {
 		
 		while(execute){
 			try {
-				sleep(3000);
+				sleep(1000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

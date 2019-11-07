@@ -21,7 +21,7 @@ public class Nivel1 extends Nivel{
 		juego = j;
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "321";
+		String s = "111";
 		Oleadas.add(s);
 
 	}
@@ -77,7 +77,7 @@ public class Nivel1 extends Nivel{
 					celda.agregar(nuevo);
 					juego.agregar(nuevo);
 					juego.agregarEnemigo(nuevo);
-					sleep(8000);
+					sleep(4000);
 					
 				}
 			}				 
