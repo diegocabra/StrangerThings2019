@@ -89,7 +89,7 @@ public class MapaGUI extends JFrame{
 		/*---------------------------------Botones Monje 1-2-3 ------------------------------------*/
 		BotonMonje1 =new BotonMonje_1();
 		BotonMonje2 = new BotonMonje_2();
-		BotonMonje3 =new BotonMonje_3();
+		BotonMonje3 = new BotonMonje_3();
 		BotonMonje4 =new BotonMonje_4();
 		BotonMonje5= new BotonMonje_5();
 		panelOpciones.add(BotonMonje1);
@@ -109,8 +109,12 @@ public class MapaGUI extends JFrame{
 		etiquetaInformacion = new JLabel("");
 		etiquetaInformacion.setBounds(5, 140, 500, 25);
 		etiquetaMonedas = new JLabel("Monedas: "+market.getMonedas());
-		etiquetaMonedas.setBounds(ancho-220,0 , 100, 20);
-
+		etiquetaMonedas.setBounds(ancho-100,0 , 100, 20);
+		
+		etiquetaPuntos = new JLabel("Puntos: "+juego.getPuntos());
+		etiquetaPuntos.setBounds(ancho-100,20 , 100, 20);
+		
+		panelOpciones.add(etiquetaPuntos);
 		panelOpciones.add(etiquetaMarket);
 		panelOpciones.add(etiquetaInformacion);
 		panelOpciones.add(etiquetaMonedas);
@@ -128,9 +132,8 @@ public class MapaGUI extends JFrame{
 	public void incrementarBomba(){
 		cantidadBombas++;
 	}
-
-
-
+	
+	 
 
 	private class OyentePanelMouse implements MouseListener {		
 		public void mousePressed(MouseEvent e)
@@ -195,16 +198,22 @@ public class MapaGUI extends JFrame{
 				}
 			}
 		}
-		/*
+		
 		etiquetaPuntos.setText("Puntos: "+juego.getPuntos());
+		/*
 		etiquetaMonedas.setText("Monedas: "+juego.getMonedas());
 		
 		if(cantidadBombas>0) 
 			btnBombas.setEnable(true);
 		else
 			btnBombas.setEnable(false);
+<<<<<<< HEAD
+
+		*/
+=======
 */
 		
+>>>>>>> 7a0af234b147b5534643380177b59bdf427d86c3
 		
 	}
 

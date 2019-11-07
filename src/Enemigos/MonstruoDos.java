@@ -12,7 +12,7 @@ public class MonstruoDos  extends Enemigo{
 		vida = 100;
 		danioAtaque = 2;
 		velocidad = 15;
-		puntos = 100;
+		puntos = 75;
 		monedas = 100;
 		
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/goblin_atacando_2.gif")));
