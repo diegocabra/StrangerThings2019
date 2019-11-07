@@ -2,12 +2,12 @@ package Botonera;
 
 import javax.swing.JButton;
 
-import Personajes.Personaje;
+import Objetos.Contenido;
 
 @SuppressWarnings("serial")
 public abstract class Boton extends JButton {
 
-	public abstract Personaje generateEntidad();
+	public abstract Contenido generateEntidad();
 	
 	
 }

@@ -1,6 +1,8 @@
 package Objetos;
 
 
+import javax.swing.ImageIcon;
+
 import Principal.Celda;
 
  
@@ -9,9 +11,14 @@ public class Bomba extends Objeto {
 
 	protected Estallar estallar;
 	
-	public Bomba(Celda c)
+	public Bomba()
 	{
-		super(c);
+		super();
+		vida = 100;
+		
+		
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/bomba.gif")));
+
 		/*
 		vida=Integer.MAX_VALUE;
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/sources/Bomba.gif")));
@@ -19,6 +26,12 @@ public class Bomba extends Objeto {
 		estallar = new Estallar(this,miCelda);
 		estallar.start();
 		*/
+	}
+	
+	
+	public void setCelda(Celda c) {
+		miCelda=c;
+		estallar.start();
 	}
 	/*
 	

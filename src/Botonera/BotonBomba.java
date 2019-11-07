@@ -5,34 +5,36 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 
+import Botonera.BotonMonje_2.OyenteBotonmonje2;
+import Objetos.Bomba;
 import Objetos.Contenido;
 import Personajes.Monje_2;
-import Personajes.Personaje;
-
 import Principal.Market;
 
-public class BotonMonje_2 extends Boton {
-	
+public class BotonBomba extends Boton {
+
+
 	protected Market market;
 	
-	public BotonMonje_2() {
+	public BotonBomba() {
 		market = Market.getInstance();
-		this.addActionListener(new OyenteBotonmonje2());
-		this.setBounds(160,20,60,50);
-		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/Face_2_open.png"));
+		this.addActionListener(new OyenteBotonBomba());
+		this.setBounds(100,90, 60, 50);
+		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/bomba.gif"));
 		this.setIcon(iconobtn);
 	
 	}
 	
 	public Contenido generateEntidad() {
-		return new Monje_2();
+		return new Bomba();
 		}
 
-	class OyenteBotonmonje2 implements ActionListener{
+	class OyenteBotonBomba implements ActionListener{
 		public void actionPerformed(ActionEvent e)
 		{
 			Contenido p =generateEntidad();
-		market.setFabricado(new Monje_2());
+		market.setFabricado(new Bomba());
 		}
 	}
+
 }

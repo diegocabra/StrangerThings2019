@@ -25,8 +25,8 @@ public class MapaGUI extends JFrame{
 	protected JPanel panel_3;
 
 	protected JLabel etiqueta,etiquetaPuntos,etiquetaMonedas,etiquetaInformacion,etiquetaMarket,etiquetaPW,etiquetaCantBombas;
-	protected Boton BotonMonje1,BotonMonje2,BotonMonje3,BotonMonje4,BotonMonje5;
-	protected JButton botonBomba,botonMuro;
+	protected Boton BotonBomba,BotonMonje1,BotonMonje2,BotonMonje3,BotonMonje4,BotonMonje5;
+	protected JButton botonMuro;
 	protected Market market;
 
 
@@ -89,6 +89,8 @@ public class MapaGUI extends JFrame{
 		BotonMonje3 = new BotonMonje_3();
 		BotonMonje4 =new BotonMonje_4();
 		BotonMonje5= new BotonMonje_5();
+		BotonBomba = new BotonBomba();
+		panelOpciones.add(BotonBomba);
 		panelOpciones.add(BotonMonje1);
 		panelOpciones.add(BotonMonje2);
 		panelOpciones.add(BotonMonje3);
@@ -97,13 +99,7 @@ public class MapaGUI extends JFrame{
 		
 		/*-------------------------------- Botones PW -------------------------------------------*/
 		
-		botonBomba = new JButton();
-		botonBomba.setBounds(100,90, 60, 50);
-		panelOpciones.add(botonBomba);
-		ImageIcon iconbomba = new ImageIcon(this.getClass().getResource("/Sprites/bomba.gif"));
-		botonBomba.setIcon(iconbomba);
-		botonBomba.setEnabled(false);
-		
+	
 		etiquetaPW = new JLabel("PowerUps");
 		etiquetaPW.setBounds(100, 55, 70, 50);
 		panelOpciones.add(etiquetaPW);
@@ -140,13 +136,7 @@ public class MapaGUI extends JFrame{
 
 	}
 
-	private class OyenteEliminar implements ActionListener {
-		public void actionPerformed(ActionEvent e)
-		{
-
-		}
-	}
-
+	
 
 	public void incrementarBomba(){
 		cantidadBombas++;
@@ -161,7 +151,7 @@ public class MapaGUI extends JFrame{
 			int i = e.getY() / 80 ;
 			int j = e.getX() ;
 			Celda aux = mapa.getCelda(i, j);
-			Personaje PersonajeFabricado=market.getPersonajeFabricado();
+			Contenido PersonajeFabricado=market.getContenidoFabricado();
 			if ((PersonajeFabricado!=null)&&(market.alcanza()))
 			{
 				PersonajeFabricado.setCelda(aux);
@@ -219,16 +209,7 @@ public class MapaGUI extends JFrame{
 		}
 		
 		etiquetaPuntos.setText("Puntos: "+juego.getPuntos());
-		/*
-		etiquetaMonedas.setText("Monedas: "+juego.getMonedas());
 		
-		if(cantidadBombas>0) 
-			btnBombas.setEnable(true);
-		else
-			btnBombas.setEnable(false);
-<<<<<<< HEAD
-
-		*/
 
 	}
 

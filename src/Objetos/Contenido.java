@@ -22,6 +22,7 @@ public abstract class Contenido {
 		vida=0;
 		costo=0;
 	}
+	
 	public void decrementarVida(float f)
 	{
 		vida-=f;
