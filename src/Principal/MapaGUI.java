@@ -219,16 +219,14 @@ public class MapaGUI extends JFrame{
 		}
 		
 		etiquetaPuntos.setText("Puntos: "+juego.getPuntos());
-		/*
-		etiquetaMonedas.setText("Monedas: "+juego.getMonedas());
+		etiquetaCantBombas.setText(""+cantidadBombas);
+		
+		//etiquetaMonedas.setText("Monedas: "+juego.getMonedas());
 		
 		if(cantidadBombas>0) 
-			btnBombas.setEnable(true);
+			botonBomba.setEnabled(true);
 		else
-			btnBombas.setEnable(false);
-<<<<<<< HEAD
-
-		*/
+			botonBomba.setEnabled(false);
 
 	}
 

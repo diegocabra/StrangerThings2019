@@ -46,10 +46,10 @@ public abstract class PowerUp extends Contenido{
 						
 					}
 				}
+				this.destruir();
 			}
  
-		}
-		
+		}		
 	}
 	
 	
