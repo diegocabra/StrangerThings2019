@@ -1,14 +1,8 @@
 package Objetos;
 
-import java.util.Iterator;
-
 import Principal.Celda;
 
-
 public class Estallar extends Thread{
-	/*
-}
-
 	protected Bomba bomba;
 	protected Celda celda;
 	
@@ -18,8 +12,7 @@ public class Estallar extends Thread{
 		celda = c;
 	}
 	
-	public void run()
-	{
+	public void run(){
 		try {
 			sleep(2000);
 			bomba.estallar();
@@ -30,68 +23,46 @@ public class Estallar extends Thread{
 		}
 		
 		boolean parar = false;
-		Celda sig;
+		Celda siguiente;
 		int cont = 0;
 		Contenido aux;
 		
 		if(celda!=null){
-			while(cont<80) {
+			while(cont<160 && !parar) {
 				cont++;
 				//ver
-				siguiente = miCelda.getMapa().getCelda(miCelda.getFila(),miCelda.getColumna()-cont);
+				siguiente = celda.getMapa().getCelda(celda.getFila(),celda.getColumna()-cont);
 				if(siguiente!=null) {
 					aux = siguiente.getContenido();
 					if(aux !=null ) {
-						aux.aceptar(miVisitor);
-						//System.out.println("Encontre alguien wachin");
-						encontre=true;
-						entregarPW.terminate();
-						this.destruir();
+						aux.destruir();
 						//mover = false;
 						
 					}
 				}
-		}
-			while(cont<160 && !parar){
-				cont++;
-				sig = celda.getMapa().getCelda(celda.getFila(), celda.getColumna()-cont);
-				if(sig!=null){
-					if(aux.getCelda().!=null)		{
-						aux.destruir();
-					}
 				else
 					parar = true;
-				}
-			
-			parar=false;
-			
-		
-			cont=0;
-			while(cont<160 && !parar)
-			{
-				cont++;
-				sig = celda.getMapa().getCelda(celda.getFila(), celda.getColumna()+cont);
-				if(sig!=null)
-				{
-					Iterator<Contenido> it = sig.getContenido();
-					while(it.hasNext())
-					{
-						aux = it.next();
-						if(aux!=null)
-						{
-							aux.destruir();
-						}
-					}
-				}
-				else
-				{
-					parar=true;
-				}
 			}
 		}
 		
+		cont = 0;
+		while(cont<160 && !parar) {
+			cont++;
+			//ver
+			siguiente = celda.getMapa().getCelda(celda.getFila(),celda.getColumna()+cont);
+			if(siguiente!=null) {
+				aux = siguiente.getContenido();
+				if(aux !=null ) {
+					aux.destruir();
+					//mover = false;
+					
+				}
+			}
+			else
+				parar = true;
+		}
+		
 		bomba.destruir();
-	}
-	*/
+	}	
 	
 }

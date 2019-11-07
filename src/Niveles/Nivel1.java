@@ -21,7 +21,7 @@ public class Nivel1 extends Nivel{
 		juego = j;
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "111";
+		String s = "333";
 		Oleadas.add(s);
 
 	}
