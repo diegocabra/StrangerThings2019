@@ -12,7 +12,7 @@ public class MonstruoCuatro  extends Enemigo{
 		vida = 100;
 		danioAtaque = 2;
 		velocidad = 15;
-		puntos = 100;
+		puntos = 200;
 		monedas = 100;
 		
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_4.gif")));

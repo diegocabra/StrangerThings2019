@@ -109,8 +109,11 @@ public class Juego {
 	}
 	
 	public void incrementarPuntos(int p) {
-		puntos+=p;
-		
+		puntos+=p;		
+	}
+	
+	public int getPuntos() {
+		return puntos;
 	}
 
 

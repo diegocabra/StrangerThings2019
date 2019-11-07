@@ -12,7 +12,7 @@ public class MonstruoTres  extends Enemigo{
 		vida = 100;
 		danioAtaque = 3;
 		velocidad = 20;
-		puntos = 200;
+		puntos = 150;
 		monedas = 100;
 		
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_2.gif")));

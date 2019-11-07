@@ -12,7 +12,7 @@ public class MonstruoCinco  extends Enemigo{
 		vida = 100;
 		danioAtaque = 2;
 		velocidad = 15;
-		puntos = 100;
+		puntos = 300;
 		monedas = 100;
 		
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Alien_caminando_5.gif")));
