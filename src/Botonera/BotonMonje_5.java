@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 
+import Objetos.Contenido;
 import Personajes.Monje_5;
 import Personajes.Personaje;
 import Principal.Market;
@@ -22,14 +23,14 @@ public class BotonMonje_5 extends Boton {
 		this.setIcon(iconobtn);
 	}
 	
-	public Personaje generateEntidad() {
+	public Contenido generateEntidad() {
 		return new Monje_5();
 		}
 
 	class OyenteBotonmonje5 implements ActionListener{
 		public void actionPerformed(ActionEvent e)
 		{
-			Personaje p =generateEntidad();
+			Contenido p =generateEntidad();
 		market.setFabricado(new Monje_5());
 		}
 	}

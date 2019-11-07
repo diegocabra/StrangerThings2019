@@ -11,6 +11,11 @@ public class Objeto extends Contenido{
 		super(c);
 	}
 	
+	public Objeto ()
+	{
+		super();
+	}
+	
 	
 	public boolean aceptar(Visitor v)
 	{

@@ -62,7 +62,7 @@ public abstract class Enemigo  extends Contenido{
 			if(bonus) {
 				Random r = new Random();
 				//PowerUp nuevo = director.crearPowerUP(miCelda, (r.nextInt(4)+1));
-				PowerUp nuevo = director.crearPowerUP(miCelda, 2);
+				PowerUp nuevo = director.crearPowerUP(miCelda, 3);
 				if(nuevo != null && miCelda != null) {
 					miCelda.agregar(nuevo);
 					j.agregar(nuevo);

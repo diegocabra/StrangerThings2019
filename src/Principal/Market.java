@@ -1,9 +1,10 @@
 package Principal;
 
+import Objetos.Contenido;
 import Personajes.Personaje;
 
 public class Market {
-	protected Personaje fabricado;
+	protected Contenido fabricado;
 	protected int monedas;
 	protected static Market m;
 	public final int monedasInicio=250;
@@ -24,8 +25,8 @@ public class Market {
 	
 	//descontar monedas del juego 
 
-	public Personaje getPersonajeFabricado() {
-		Personaje toReturn = null ;
+	public Contenido getContenidoFabricado() {
+		Contenido toReturn = null ;
 		
 		if (fabricado!=null)
 			toReturn=fabricado;
@@ -33,7 +34,7 @@ public class Market {
 		//si no no hace nada .
 	}
 
-	public void setFabricado(Personaje p) {
+	public void setFabricado(Contenido p) {
 		
 			fabricado=p;
 	}
