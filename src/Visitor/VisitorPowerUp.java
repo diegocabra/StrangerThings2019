@@ -18,9 +18,7 @@ public class VisitorPowerUp implements Visitor {
 		return false;
 	}
 	
-	public boolean visitarPersonaje(Personaje p){
-		//p.getCelda().getMapa().getJuego().obtuvePowerUp();
-	System.out.println("HOla SOY UN VISITOR DE PW");
+	public boolean visitarPersonaje(Personaje p){		 
 		powerup.getPowerUp(p);
 		return true;
 	}

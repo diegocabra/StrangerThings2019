@@ -10,8 +10,8 @@ public class MonstruoTres  extends Enemigo{
 	public MonstruoTres (Celda c, boolean b) {
 		super(c,b);
 		vida = 100;
-		danioAtaque = 3;
-		velocidad = 20;
+		danioAtaque = 4;
+		velocidad = 5;
 		puntos = 150;
 		monedas = 100;
 		

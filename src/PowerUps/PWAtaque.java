@@ -8,7 +8,7 @@ import Principal.Celda;
 public class PWAtaque extends PowerUp {
 	public PWAtaque(Celda c) {
 		super(c);
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/PWAzul.gif")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/fuerzaPW.gif")));
 
 	}
 	

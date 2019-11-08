@@ -6,8 +6,8 @@ import Visitor.Visitor;
 import Visitor.VisitorPowerUp;
 
 public abstract class PowerUp extends Contenido{
-
 	protected Visitor miVisitor;
+	
 	protected EntregarPW entregarPW;
 	
 	public PowerUp(Celda c){
@@ -17,42 +17,32 @@ public abstract class PowerUp extends Contenido{
 		entregarPW.start();
 	}
 	
-	public void comprobar(){
 
+	public void comprobar(){
 		
-		boolean mover = true;
-		Celda siguiente = miCelda.getIzquierda();
+		Celda siguiente ; 
 		int cont = 0;
 		Contenido aux;
 		boolean encontre=false;
-		if(siguiente == null) {
-			encontre=false;
-			// miCelda.getMapa().getJuego().finalizarJuego(false);
-		}
-		else {
+		 
+		if(miCelda !=null) {
 			while(cont<80 && !encontre) {
 				cont++;
-				//ver
 				siguiente = miCelda.getMapa().getCelda(miCelda.getFila(),miCelda.getColumna()-cont);
 				if(siguiente!=null) {
 					aux = siguiente.getContenido();
-					if(aux !=null ) {
-						aux.aceptar(miVisitor);
-						System.out.println("Encontre alguien wachin");
+					if(aux !=null && aux.aceptar(miVisitor)) {	
 						encontre=true;
-						entregarPW.terminate();
-						this.destruir();
-						//mover = false;
-						
 					}
 				}
-				this.destruir();
-			}
- 
-		}		
+				else
+					encontre  =true; 
+				}
+			this.destruir();	 
+		}
 	}
 	
-	
+ 
 	public void destruir(){
 		entregarPW.terminate();
 		super.destruir();

@@ -17,6 +17,7 @@ public class Director {
 		case 1:
 		{
 			toReturn = new PWAtaque(c);
+ 
 			break;
 		}
 		case 2:
@@ -26,7 +27,6 @@ public class Director {
 		}
 		case 3:
 		{
-			System.out.println("ENTRE A CREAR DIRECTOR--------------- (EXTRA VIDA");
 			toReturn = new PWExtraVida(c);
 			break;
 		}

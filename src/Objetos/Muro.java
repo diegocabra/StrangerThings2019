@@ -9,7 +9,15 @@ public class Muro extends Objeto {
 	public Muro (Celda c) {
 		super(c);
 		vida = 150;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Muro.png")));
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/pared.png")));
+
+	}
+	
+	public Muro() {
+		super();
+		vida = 100;
+		costo = 20;
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/pared.png")));
 
 	}
 	

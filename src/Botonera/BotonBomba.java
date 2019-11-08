@@ -19,8 +19,8 @@ public class BotonBomba extends Boton {
 	public BotonBomba() {
 		market = Market.getInstance();
 		this.addActionListener(new OyenteBotonBomba());
-		this.setBounds(100,90, 60, 50);
-		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/bomba.gif"));
+		this.setBounds(10,90, 60, 50);
+		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/bomba.png"));
 		this.setIcon(iconobtn);
 	
 	}

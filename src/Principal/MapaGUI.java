@@ -24,9 +24,9 @@ public class MapaGUI extends JFrame{
 	protected JPanel panel_2;
 	protected JPanel panel_3;
 
-	protected JLabel etiqueta,etiquetaPuntos,etiquetaMonedas,etiquetaInformacion,etiquetaMarket,etiquetaPW,etiquetaCantBombas;
-	protected Boton BotonBomba,BotonMonje1,BotonMonje2,BotonMonje3,BotonMonje4,BotonMonje5;
-	protected JButton botonMuro;
+	protected JLabel etiqueta,etiquetaPuntos,etiquetaMonedas,etiquetaInformacion,etiquetaMarket,etiquetaPW,etiquetaCantBombas,etiquetaNivel;
+	protected Boton BotonBomba,BotonMonje1,BotonMonje2,BotonMonje3,BotonMonje4,BotonMonje5,BotonMuro;
+	//protected JButton botonMuro;
 	protected Market market;
 
 
@@ -44,8 +44,15 @@ public class MapaGUI extends JFrame{
 		getContentPane().setLayout(null);
 		setSize(ancho+6, alto+189);
 
+		
+		
 		panelOpciones = new JPanel();
 		inicializarPanelBotones();
+		panelOpciones.setOpaque(false);
+		
+		
+		 
+		
 
 		panelJuego = new JPanel();
 		inicializarPanelJuego();
@@ -83,6 +90,14 @@ public class MapaGUI extends JFrame{
 		panelOpciones.setLayout(null);
 		panelOpciones.setBorder(BorderFactory.createLineBorder(Color.black));
 		panelOpciones.setBounds(0,0, ancho, 160);
+		panelOpciones.setOpaque(false);
+		
+		/*
+		JLabel fondoPanelBotones = new JLabel();
+		 fondoPanelBotones.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/botoneraArriba.png")));
+		 fondoPanelBotones.setBounds(0,0,ancho,160);
+		 fondoPanelBotones.
+		 panelOpciones.add(fondoPanelBotones);
 		
 		/*---------------------------------Botones Monje 1-2-3 ------------------------------------*/
 		BotonMonje1 =new BotonMonje_1();
@@ -91,49 +106,59 @@ public class MapaGUI extends JFrame{
 		BotonMonje4 =new BotonMonje_4();
 		BotonMonje5= new BotonMonje_5();
 		BotonBomba = new BotonBomba();
+		BotonMuro = new BotonMuro();
+		
 		panelOpciones.add(BotonBomba);
+		panelOpciones.add(BotonMuro);
 		panelOpciones.add(BotonMonje1);
 		panelOpciones.add(BotonMonje2);
 		panelOpciones.add(BotonMonje3);
 		panelOpciones.add(BotonMonje4);
 		panelOpciones.add(BotonMonje5);
 		
+		
 		/*-------------------------------- Botones PW -------------------------------------------*/
 		
 	
 		etiquetaPW = new JLabel("PowerUps");
-		etiquetaPW.setBounds(100, 55, 70, 50);
+		etiquetaPW.setBounds(10, 55, 70, 50);
+		etiquetaPW.setForeground(Color.white);
 		panelOpciones.add(etiquetaPW);
 		
 		etiquetaCantBombas = new JLabel(""+market.getCantidadBombas());
-		etiquetaCantBombas.setBounds(125,128,40,40);
+		etiquetaCantBombas.setBounds(35,128,40,40);
+		etiquetaCantBombas.setForeground(Color.white);
 		panelOpciones.add(etiquetaCantBombas);
 		
 		
 		/*---------------------------------------------------------------------------------------*/
 		
+		etiquetaNivel = new JLabel("NIVEL 1");
+		etiquetaNivel.setBounds(450, 0, 500, 25);
+		etiquetaNivel.setForeground(Color.white);
 		
-		//JButton boton = new JButton();
-	//	new ImageIcon(this.getClass().getResource("/Sprites/muro.png");
-		//ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/Face_1.png"));
-	//	boton.setIcon(iconobtn);
-	//	panelOpciones.add(boton);
-		//boton.setBounds(000, 30, 90, 90);
-	//	new javax.swing.ImageIcon(getClass().getResource("/iconos/action_button_cancel.png")
+		
 		etiquetaMarket = new JLabel("MarketPlace");
-		etiquetaMarket.setBounds(100, 0, 500, 25);
+		etiquetaMarket.setBounds(10, 0, 500, 25);
+		etiquetaMarket.setForeground(Color.white);
+		
 		etiquetaInformacion = new JLabel("");
 		etiquetaInformacion.setBounds(5, 140, 500, 25);
+		etiquetaInformacion.setForeground(Color.white);
+		
 		etiquetaMonedas = new JLabel("Monedas: "+market.getMonedas());
 		etiquetaMonedas.setBounds(ancho-100,0 , 100, 20);
+		etiquetaMonedas.setForeground(Color.white);
 		
 		etiquetaPuntos = new JLabel("Puntos: "+juego.getPuntos());
 		etiquetaPuntos.setBounds(ancho-100,20 , 100, 20);
+		etiquetaPuntos.setForeground(Color.white);
 		
 		panelOpciones.add(etiquetaPuntos);
 		panelOpciones.add(etiquetaMarket);
 		panelOpciones.add(etiquetaInformacion);
 		panelOpciones.add(etiquetaMonedas);
+		panelOpciones.add(etiquetaNivel);
 
 	}
 

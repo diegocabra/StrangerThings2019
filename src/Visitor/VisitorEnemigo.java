@@ -38,10 +38,7 @@ public class VisitorEnemigo implements Visitor {
 			enemigo.destruir();
 			p.esperar();
 		}
-		if(enemigo.getVida() <= 0) {
-			p.esperar();
-			enemigo.destruir();
-		}
+	
 		
 		if(p.getVida() <= 0) {
 			
@@ -54,7 +51,6 @@ public class VisitorEnemigo implements Visitor {
 
 	 
 	public boolean visitarObjeto(Objeto o) {
-		//System.out.println("Entre a visitar objeto");
 		if(enemigo.getCaminando())
 			enemigo.atacar();
 		

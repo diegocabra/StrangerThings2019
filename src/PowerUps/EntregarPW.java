@@ -7,9 +7,11 @@ public class EntregarPW extends Thread {
 	
 	public EntregarPW(PowerUp pw){
 		powerup=pw;
+		 
 	}
 	
 	public void terminate(){
+	 
 		execute = false;
 	}
 	
@@ -22,9 +24,8 @@ public class EntregarPW extends Thread {
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-			
-			powerup.comprobar();
+			}		
+			powerup.comprobar();		
 		}
 	}
 }

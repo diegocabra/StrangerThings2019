@@ -66,6 +66,7 @@ public class Market {
 	public void decrementarBomba() {
 		cantidadBombas--;
 	}
+	
 	public int getCantidadBombas() {
 		return cantidadBombas;
 	}

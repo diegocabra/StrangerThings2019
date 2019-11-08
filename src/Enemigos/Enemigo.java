@@ -68,15 +68,13 @@ public abstract class Enemigo  extends Contenido{
 					j.agregar(nuevo);
 				}
 				
-			}
-			
-			
+			}		
 		}
 		
 	}
 	
 	public void mover() {
-		//System.out.println("entre a mover alien");
+	 
 		boolean mover = true;
 		Celda siguiente = miCelda.getIzquierda();
 		int cont = 0;

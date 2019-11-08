@@ -6,8 +6,7 @@ public class Estallar extends Thread{
 	protected Bomba bomba;
 	protected Celda celda;
 	
-	public Estallar(Bomba b,Celda c)
-	{
+	public Estallar(Bomba b,Celda c){
 		bomba=b;
 		celda = c;
 	}
@@ -16,7 +15,7 @@ public class Estallar extends Thread{
 		try {
 			sleep(2000);
 			bomba.estallar();
-			sleep(700);
+			sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -55,6 +54,8 @@ public class Estallar extends Thread{
 			if(siguiente!=null) {
 				aux = siguiente.getContenido();
 				if(aux !=null ) {
+					System.out.println("----Entre a estallar");
+
 					aux.destruir();
 					//mover = false;
 					

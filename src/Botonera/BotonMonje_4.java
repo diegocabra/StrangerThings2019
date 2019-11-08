@@ -17,7 +17,7 @@ public class BotonMonje_4 extends Boton {
 	public BotonMonje_4() {
 		market = Market.getInstance();
 		this.addActionListener(new OyenteBotonmonje4());
-		this.setBounds(280, 20, 60, 50);
+		this.setBounds(205, 20, 60, 50);
 		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/Face_4_open.png"));
 		this.setIcon(iconobtn);
 	}

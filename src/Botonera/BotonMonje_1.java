@@ -16,7 +16,7 @@ public class BotonMonje_1 extends Boton {
 	public BotonMonje_1() {
 		market = Market.getInstance();
 		this.addActionListener(new OyenteBotonmonje1());
-		this.setBounds(100,20, 60, 50);
+		this.setBounds(10,20, 60, 50);
 		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/Face_1_open.png"));
 		this.setIcon(iconobtn);
 	
@@ -30,7 +30,7 @@ public class BotonMonje_1 extends Boton {
 		public void actionPerformed(ActionEvent e)
 		{
 			Contenido p =generateEntidad();
-		market.setFabricado(new Monje_1());
+			market.setFabricado(new Monje_1());
 		}
 	}
 }
