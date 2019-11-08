@@ -53,6 +53,7 @@ public class MapaGUI extends JFrame{
 		
 		panelJuego = new JPanel();
 		inicializarPanelJuego();
+		this.setLocationRelativeTo(null);
 
 		//Panel con etiqueta de fondo
 		JPanel panelFondo = new JPanel();
@@ -254,7 +255,14 @@ public class MapaGUI extends JFrame{
 		}
 		
 		etiquetaPuntos.setText("Puntos: "+juego.getPuntos());
-		etiquetaCantBombas.setText(""+market.getCantidadBombas());
+		if (market.getCantidadBombas() > 0) {
+			etiquetaCantBombas.setText(""+market.getCantidadBombas());
+			etiquetaCantBombas.setEnabled(true);
+		}
+		else		
+			etiquetaCantBombas.setEnabled(false);
+
+			
 		
 
 	}

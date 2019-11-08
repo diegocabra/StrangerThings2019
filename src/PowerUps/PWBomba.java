@@ -13,17 +13,12 @@ public class PWBomba extends PowerUp {
 	public PWBomba(Celda c) {
 		super(c);
 		 market = Market.getInstance();
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/bomba.gif")));
+		 grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/granada.png")));
 	}
 	
 	public void getPowerUp(Personaje p) {
 		if(miCelda != null) {
-			System.out.println("Capture bomba ---------");
 			market.incrementarBomba();
-		//	miCelda.getMapa().getJuego().incrementarBomba();
-			
-			//Creo bomba para probar estallar
-			//Bomba b = new Bomba(miCelda);
 		}
 	}
 

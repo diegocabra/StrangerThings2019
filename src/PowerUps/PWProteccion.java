@@ -9,7 +9,7 @@ public class PWProteccion extends PowerUp {
 	
 	public PWProteccion(Celda c) {
 		super(c);
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/PWRojo.gif")));		
+		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/escudo.png")));		
 	}
 	
 	public void getPowerUp(Personaje p) {

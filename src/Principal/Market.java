@@ -24,9 +24,6 @@ public class Market {
 	}
 
 
-	
-	//descontar monedas del juego 
-
 	public Contenido getContenidoFabricado() {
 		Contenido toReturn = null ;
 		
@@ -40,6 +37,7 @@ public class Market {
 		
 			fabricado=p;
 	}
+	
 	public boolean alcanza() {
 	boolean	toreturn=false;
 		if (fabricado.getCosto()<=getMonedas())// alcanza(); habilita oro 

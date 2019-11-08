@@ -8,7 +8,7 @@ public class Muro extends Objeto {
 	
 	public Muro (Celda c) {
 		super(c);
-		vida = 150;
+		vida = 900;
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/pared.png")));
 
 	}

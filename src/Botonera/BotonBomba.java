@@ -20,8 +20,9 @@ public class BotonBomba extends Boton {
 		market = Market.getInstance();
 		this.addActionListener(new OyenteBotonBomba());
 		this.setBounds(450,25, 60, 50);
-		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/bomba.png"));
+		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/granadaBtn.png"));
 		this.setIcon(iconobtn);
+		//setEnabled(false);
 	
 	}
 	
@@ -33,8 +34,14 @@ public class BotonBomba extends Boton {
 		public void actionPerformed(ActionEvent e)
 		{
 			Contenido p =generateEntidad();
-		market.setFabricado(new Bomba());
+			if(market.getCantidadBombas()>0) {
+				setEnabled(true);
+				market.setFabricado(new Bomba());
+				market.decrementarBomba();
+			}
+			else {
+			//	setEnabled(false);
+			}
 		}
 	}
-
 }

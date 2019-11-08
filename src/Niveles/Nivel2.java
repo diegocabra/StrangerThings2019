@@ -29,7 +29,7 @@ public class Nivel2 extends Nivel{
 
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "3444";
+		String s = "33232343342344443";
 		Oleadas.add(s);
 
 	}
@@ -70,7 +70,7 @@ public class Nivel2 extends Nivel{
 					
 					boolean powerUp = false;
 					random1 = r1.nextInt(100);
-					if(random1 %5 == 0)
+					if(random1 %2 == 0)
 						powerUp = true;
 					
 					switch (Proximo) {
@@ -88,7 +88,7 @@ public class Nivel2 extends Nivel{
 					celda.agregar(nuevo);
 					juego.agregar(nuevo);
 					juego.agregarEnemigo(nuevo);
-					sleep(8000);
+					sleep(2000);
 					
 				}
 			}				 

@@ -14,7 +14,7 @@ public class Monje_1 extends Personaje {
 		super();
 		vida = 100;
 		costo = 30;
-		danio = 3;
+		danio = 2;
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Monje_1_Atacando.gif")));
 
 	}

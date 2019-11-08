@@ -10,7 +10,7 @@ public class MonstruoCinco  extends Enemigo{
 	public MonstruoCinco (Celda c, boolean b) {
 		super(c,b);
 		vida = 100;
-		danioAtaque = 20;
+		danioAtaque = 3;
 		velocidad = 1;
 		puntos = 300;
 		monedas = 100;

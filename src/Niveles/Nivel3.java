@@ -25,14 +25,14 @@ public class Nivel3 extends Nivel{
 
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "354";
+		String s = "554332514444555454545454545455444335";
 		Oleadas.add(s);
 
 	}
  
 	public void run () {
 		try {
-			juego.cambiarNivelEtiqueta(2);
+			juego.cambiarNivelEtiqueta(3);
 			Random r1 = new Random();
 			int random1 = r1.nextInt(juego.getFilas());
 			int random2 =  r1.nextInt(juego.getColumnas()-80);
@@ -66,7 +66,7 @@ public class Nivel3 extends Nivel{
 					
 					boolean powerUp = false;
 					random1 = r1.nextInt(100);
-					if(random1 %5 == 0)
+					if(random1 %2 == 0)
 						powerUp = true;
 					
 					switch (Proximo) {
@@ -84,7 +84,7 @@ public class Nivel3 extends Nivel{
 					celda.agregar(nuevo);
 					juego.agregar(nuevo);
 					juego.agregarEnemigo(nuevo);
-					sleep(8000);
+					sleep(1000);
 					
 				}
 			}				 
@@ -104,7 +104,7 @@ public class Nivel3 extends Nivel{
 
 	 
 	public Nivel reiniciarNivel() {
-		return new Nivel2(null);
+		return new Nivel3(null);
 	}
 
 }

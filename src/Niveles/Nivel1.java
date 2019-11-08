@@ -21,7 +21,7 @@ public class Nivel1 extends Nivel{
 		juego = j;
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "2222";
+		String s = "1213";
 		Oleadas.add(s);
 
 	}
@@ -60,9 +60,9 @@ public class Nivel1 extends Nivel{
 					Enemigo nuevo = null;
 					char Proximo = s.charAt(i);
 					
-					boolean powerUp = true; //NO OLVIDADRSE
+					boolean powerUp = false; //NO OLVIDADRSE
 					random1 = r1.nextInt(100);
-					if(random1 %5 == 0)
+					if(random1 %2 == 0)
 						powerUp = true;
 					
 					switch (Proximo) {
