@@ -17,6 +17,7 @@ import Objetos.Objeto;
 import Principal.Juego;
  
 import herramientas.Coleccion;
+ 
 import Principal.Celda;
 public class Nivel2 extends Nivel{
 	
@@ -24,16 +25,18 @@ public class Nivel2 extends Nivel{
 	
 	public Nivel2(Juego l) {
 		juego = l;
+		
+
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "354";
+		String s = "3444";
 		Oleadas.add(s);
 
 	}
  
 	public void run () {
 		try {
-					
+			juego.cambiarNivelEtiqueta(2);
 			Random r1 = new Random();
 			int random1 = r1.nextInt(juego.getFilas());
 			int random2 =  r1.nextInt(juego.getColumnas()-80);
@@ -100,7 +103,7 @@ public class Nivel2 extends Nivel{
 	
 	
 	public Nivel siguienteNivel() {
-		return null;
+		return new Nivel3(null);
 	}
 
 	 

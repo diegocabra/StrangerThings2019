@@ -13,9 +13,9 @@ public class Estallar extends Thread{
 	
 	public void run(){
 		try {
-			sleep(2000);
-			bomba.estallar();
-			sleep(1000);
+			//sleep(200);
+			//bomba.estallar();
+			sleep(700);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -35,10 +35,8 @@ public class Estallar extends Thread{
 				if(siguiente!=null) {
 					aux = siguiente.getContenido();
 					if(aux !=null ) {
-						System.out.println("----Entre a estallar");
-						aux.destruir();
-						//mover = false;
-						
+						System.out.println("----Entre a estallar por izquierda");
+						aux.destruir();						
 					}
 				}
 				else
@@ -54,8 +52,7 @@ public class Estallar extends Thread{
 			if(siguiente!=null) {
 				aux = siguiente.getContenido();
 				if(aux !=null ) {
-					System.out.println("----Entre a estallar");
-
+					System.out.println("----Entre a estallar por derecha");
 					aux.destruir();
 					//mover = false;
 					

@@ -1,34 +1,38 @@
 package Niveles;
+
 import java.util.Random;
 
 import Enemigos.Enemigo;
 import Enemigos.Monstruo;
+import Enemigos.MonstruoCinco;
+import Enemigos.MonstruoCuatro;
 import Enemigos.MonstruoDos;
 import Enemigos.MonstruoTres;
 import Objetos.Agua;
-import Objetos.Contenido;
 import Objetos.Muro;
 import Objetos.Objeto;
-import Principal.Juego;
- 
-import herramientas.Coleccion;
 import Principal.Celda;
-public class Nivel1 extends Nivel{
+import Principal.Juego;
+import herramientas.Coleccion;
+
+public class Nivel3 extends Nivel{
 	
 	protected Coleccion<String> Oleadas;
 	
-	public Nivel1(Juego j) {
-		juego = j;
+	public Nivel3(Juego l) {
+		juego = l;
+		
+
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "2222";
+		String s = "354";
 		Oleadas.add(s);
 
 	}
  
 	public void run () {
 		try {
-					
+			juego.cambiarNivelEtiqueta(2);
 			Random r1 = new Random();
 			int random1 = r1.nextInt(juego.getFilas());
 			int random2 =  r1.nextInt(juego.getColumnas()-80);
@@ -60,7 +64,7 @@ public class Nivel1 extends Nivel{
 					Enemigo nuevo = null;
 					char Proximo = s.charAt(i);
 					
-					boolean powerUp = true; //NO OLVIDADRSE
+					boolean powerUp = false;
 					random1 = r1.nextInt(100);
 					if(random1 %5 == 0)
 						powerUp = true;
@@ -72,12 +76,15 @@ public class Nivel1 extends Nivel{
 	                         break;
 	                case '3':  nuevo = new MonstruoTres(celda,powerUp);
 	                         break;
-	            
+	                case '4':  nuevo = new MonstruoCuatro(celda,powerUp);
+	                		 break;
+	                case '5':  nuevo = new MonstruoCinco(celda,powerUp);
+	       		 			 break;
 	            	}
 					celda.agregar(nuevo);
 					juego.agregar(nuevo);
 					juego.agregarEnemigo(nuevo);
-					sleep(2000);
+					sleep(8000);
 					
 				}
 			}				 
@@ -92,12 +99,12 @@ public class Nivel1 extends Nivel{
 	
 	
 	public Nivel siguienteNivel() {
-		return new Nivel2(null);
+		return new Nivel3(null);
 	}
 
 	 
 	public Nivel reiniciarNivel() {
-		return new Nivel1(null);
+		return new Nivel2(null);
 	}
 
 }

@@ -10,8 +10,8 @@ public class Monje_5 extends Personaje {
 	public Monje_5() {
 		super();
 		vida = 100;
-		costo = 50;
-		danio = 200;
+		costo = 100;
+		danio = 50;
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Monje_5_esperando.gif")));
 	//	generarBolas = new GenerarBolaDeFuego(this);
 		//generarBolas.start();

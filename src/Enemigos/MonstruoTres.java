@@ -10,8 +10,8 @@ public class MonstruoTres  extends Enemigo{
 	public MonstruoTres (Celda c, boolean b) {
 		super(c,b);
 		vida = 100;
-		danioAtaque = 4;
-		velocidad = 5;
+		danioAtaque = 6;
+		velocidad = 3;
 		puntos = 150;
 		monedas = 100;
 		
@@ -23,7 +23,7 @@ public class MonstruoTres  extends Enemigo{
 	
 	public void caminar() {
 		caminando = true;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Orco_caminando.gif")));
+	//	grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Orco_caminando.gif")));
 		
 	}
 	

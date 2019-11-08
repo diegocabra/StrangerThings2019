@@ -1,6 +1,7 @@
 package Principal;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Window;
 import java.awt.event.*;
 import javax.swing.*;
@@ -24,7 +25,7 @@ public class MapaGUI extends JFrame{
 	protected JPanel panel_2;
 	protected JPanel panel_3;
 
-	protected JLabel etiqueta,etiquetaPuntos,etiquetaMonedas,etiquetaInformacion,etiquetaMarket,etiquetaPW,etiquetaCantBombas,etiquetaNivel;
+	protected JLabel etiqueta,etiquetaPuntos,etiquetaMonedas,etiquetaInformacion,etiquetaMarket,etiquetaPW,etiquetaCantBombas,etiquetaNivel,precioM1,precioM2,precioM3,precioM4,precioM5,precioMuro;
 	protected Boton BotonBomba,BotonMonje1,BotonMonje2,BotonMonje3,BotonMonje4,BotonMonje5,BotonMuro;
 	//protected JButton botonMuro;
 	protected Market market;
@@ -50,10 +51,6 @@ public class MapaGUI extends JFrame{
 		inicializarPanelBotones();
 		panelOpciones.setOpaque(false);
 		
-		
-		 
-		
-
 		panelJuego = new JPanel();
 		inicializarPanelJuego();
 
@@ -92,13 +89,7 @@ public class MapaGUI extends JFrame{
 		panelOpciones.setBounds(0,0, ancho, 160);
 		panelOpciones.setOpaque(false);
 		
-		/*
-		JLabel fondoPanelBotones = new JLabel();
-		 fondoPanelBotones.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/botoneraArriba.png")));
-		 fondoPanelBotones.setBounds(0,0,ancho,160);
-		 fondoPanelBotones.
-		 panelOpciones.add(fondoPanelBotones);
-		
+	 
 		/*---------------------------------Botones Monje 1-2-3 ------------------------------------*/
 		BotonMonje1 =new BotonMonje_1();
 		BotonMonje2 = new BotonMonje_2();
@@ -117,24 +108,56 @@ public class MapaGUI extends JFrame{
 		panelOpciones.add(BotonMonje5);
 		
 		
-		/*-------------------------------- Botones PW -------------------------------------------*/
+		/*-------------------------------- Botones  -------------------------------------------*/
 		
 	
 		etiquetaPW = new JLabel("PowerUps");
-		etiquetaPW.setBounds(10, 55, 70, 50);
+		etiquetaPW.setBounds(450, 0, 500, 25);
 		etiquetaPW.setForeground(Color.white);
 		panelOpciones.add(etiquetaPW);
 		
 		etiquetaCantBombas = new JLabel(""+market.getCantidadBombas());
-		etiquetaCantBombas.setBounds(35,128,40,40);
+		etiquetaCantBombas.setBounds(475,65,40,40);
 		etiquetaCantBombas.setForeground(Color.white);
 		panelOpciones.add(etiquetaCantBombas);
+		
+		precioM1 = new JLabel("30");
+		precioM1.setBounds(25,65,40,40);
+		precioM1.setForeground(Color.white);
+		panelOpciones.add(precioM1);
+		
+		precioM2 = new JLabel("50");
+		precioM2.setBounds(95,65,40,40);
+		precioM2.setForeground(Color.white);
+		panelOpciones.add(precioM2);
+		
+		precioM3 = new JLabel("60");
+		precioM3.setBounds(155,65,40,40);
+		precioM3.setForeground(Color.white);
+		panelOpciones.add(precioM3);
+		
+		precioM4 = new JLabel("70");
+		precioM4.setBounds(220,65,40,40);
+		precioM4.setForeground(Color.white);
+		panelOpciones.add(precioM4);
+		
+		precioM5 = new JLabel("100");
+		precioM5.setBounds(285,65,40,40);
+		precioM5.setForeground(Color.white);
+		panelOpciones.add(precioM5);
+		
+		precioMuro = new JLabel("55");
+		precioMuro.setBounds(355,65,40,40);
+		precioMuro.setForeground(Color.white);
+		panelOpciones.add(precioMuro);
 		
 		
 		/*---------------------------------------------------------------------------------------*/
 		
 		etiquetaNivel = new JLabel("NIVEL 1");
-		etiquetaNivel.setBounds(450, 0, 500, 25);
+		etiquetaNivel.setBounds(355, 130, 500, 25);
+		etiquetaNivel.setFont(new Font("Arial",Font.PLAIN,18));
+	 
 		etiquetaNivel.setForeground(Color.white);
 		
 		
@@ -287,8 +310,8 @@ public class MapaGUI extends JFrame{
 		return respuesta;
 	}
 	
-	public void activarPowerUp() {
-		
+	public void cambiarNivel(int n) {
+		etiquetaNivel.setText("NIVEL "+n);
 	}
 
 

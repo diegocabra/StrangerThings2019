@@ -17,7 +17,7 @@ public class BotonMuro extends Boton {
 	public BotonMuro() {
 		market = Market.getInstance();
 		this.addActionListener(new OyenteBotonMuro());
-		this.setBounds(335,20,60,50);
+		this.setBounds(335,25,60,50);
 		ImageIcon iconobtn = new ImageIcon(this.getClass().getResource("/Sprites/pared.png"));
 		this.setIcon(iconobtn);
 	

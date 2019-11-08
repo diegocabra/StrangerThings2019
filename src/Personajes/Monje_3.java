@@ -8,8 +8,8 @@ public class Monje_3 extends Personaje {
 	public Monje_3() {
 		super();
 		vida = 100;
-		costo = 50;
-		danio = 2;
+		costo = 60;
+		danio = 5;
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Monje_3_esperando.gif")));
 
 	}

@@ -10,8 +10,8 @@ public class MonstruoCinco  extends Enemigo{
 	public MonstruoCinco (Celda c, boolean b) {
 		super(c,b);
 		vida = 100;
-		danioAtaque = 2;
-		velocidad = 15;
+		danioAtaque = 20;
+		velocidad = 1;
 		puntos = 300;
 		monedas = 100;
 		
@@ -23,7 +23,7 @@ public class MonstruoCinco  extends Enemigo{
 	
 	public void caminar() {
 		caminando = true;
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/gCaminando.gif")));
+	//	grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/gCaminando.gif")));
 		
 	}
 	

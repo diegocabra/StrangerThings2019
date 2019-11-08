@@ -41,7 +41,6 @@ public class VisitorEnemigo implements Visitor {
 	
 		
 		if(p.getVida() <= 0) {
-			
 			enemigo.caminar();
 			p.destruir();
 		}
