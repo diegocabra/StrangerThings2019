@@ -11,7 +11,7 @@ public class MonstruoCinco  extends Enemigo{
 		super(c,b);
 		vida = 100;
 		danioAtaque = 3;
-		velocidad = 1;
+		velocidad = 3;
 		puntos = 300;
 		monedas = 100;
 		

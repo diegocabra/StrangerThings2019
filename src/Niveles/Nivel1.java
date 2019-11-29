@@ -27,6 +27,7 @@ public class Nivel1 extends Nivel{
 		Oleadas.add(s);
 		//5433211
 		//333211
+		monedasAux=250;
 	}
  
 	public void run () {
@@ -101,12 +102,13 @@ public class Nivel1 extends Nivel{
 	
 	
 	public Nivel siguienteNivel() {
-		return new Nivel2(null);
+		return new Nivel2(juego);
 	}
 
 	 
 	public Nivel reiniciarNivel() {
-		return new Nivel1(null);
+		super.reiniciarNivel();
+		return new Nivel1(juego);
 	}
 
 }

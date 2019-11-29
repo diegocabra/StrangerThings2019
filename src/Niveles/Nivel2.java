@@ -31,7 +31,7 @@ public class Nivel2 extends Nivel{
 		Oleadas = new Coleccion<String>();
 		String s = "33344221";
 		Oleadas.add(s);
-
+		monedasAux=juego.getMarket().getMonedas();
 	}
  
 	public void run () {
@@ -103,12 +103,13 @@ public class Nivel2 extends Nivel{
 	
 	
 	public Nivel siguienteNivel() {
-		return new Nivel3(null);
+		return new Nivel3(juego);
 	}
 
 	 
 	public Nivel reiniciarNivel() {
-		return new Nivel2(null);
+		super.reiniciarNivel();
+		return new Nivel2(juego);
 	}
 
 }

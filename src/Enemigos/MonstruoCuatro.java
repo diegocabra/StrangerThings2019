@@ -11,7 +11,7 @@ public class MonstruoCuatro  extends Enemigo{
 		super(c,b);
 		vida = 100;
 		danioAtaque = 10;
-		velocidad = 2;
+		velocidad = 3;
 		puntos = 200;
 		monedas = 100;
 		

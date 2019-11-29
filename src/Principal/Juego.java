@@ -144,6 +144,10 @@ public class Juego {
 	public void setBombas() {
 		gui.setBombas();
 	}
+	
+	public Market getMarket(){
+		return gui.getMarket();
+	}
 }
  
 
