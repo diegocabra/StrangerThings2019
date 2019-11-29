@@ -8,6 +8,7 @@ import Enemigos.MonstruoCuatro;
 import Enemigos.MonstruoDos;
 import Enemigos.MonstruoTres;
 import Objetos.Agua;
+import Objetos.Contenido;
 import Objetos.Muro;
 import Objetos.Objeto;
 import Principal.Juego;
@@ -24,7 +25,8 @@ public class Nivel1 extends Nivel{
 		Oleadas = new Coleccion<String>();
 		String s = "333211";
 		Oleadas.add(s);
-		monedasAux=250;
+		//5433211
+		//333211
 	}
  
 	public void run () {
@@ -99,16 +101,12 @@ public class Nivel1 extends Nivel{
 	
 	
 	public Nivel siguienteNivel() {
-		return new Nivel2(juego);
+		return new Nivel2(null);
 	}
 
 	 
 	public Nivel reiniciarNivel() {
-		if (monedasAux>juego.getMarket().getMonedas())
-			juego.getMarket().incrementarMonedas(monedasAux-juego.getMarket().getMonedas());
-		else if (monedasAux<juego.getMarket().getMonedas())
-			juego.getMarket().decrementarMonedas(juego.getMarket().getMonedas()-monedasAux);
-		return new Nivel1(juego);
+		return new Nivel1(null);
 	}
 
 }
