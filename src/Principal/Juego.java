@@ -37,8 +37,8 @@ public class Juego {
 		enemigos = new Coleccion<Enemigo>();
 	
 		
-		
 		gui = new MapaGUI(this);
+		gui.getMarket().reiniciarOro();
 		//insertarEnemigos();
 		nivel.start();
 		actualizar();
@@ -126,7 +126,9 @@ public class Juego {
 			
 			if(JugarDeNuevo) {
 				if(win) {
-					new Juego(nivel.siguienteNivel(),puntosAux,cantFilas,cantColumnas/80);
+					if (nivel.siguienteNivel()==null)
+						new Juego(6,10);
+					else new Juego(nivel.siguienteNivel(),puntosAux,cantFilas,cantColumnas/80);
 				}
 				else {
 					new Juego(nivel.reiniciarNivel(),0,cantFilas,cantColumnas/80);

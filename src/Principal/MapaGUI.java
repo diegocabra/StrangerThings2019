@@ -326,5 +326,9 @@ public class MapaGUI extends JFrame{
 		etiquetaCantBombas.setText(""+0);
 	}
 
+	public Market getMarket() {
+		return market;
+	}
+
 
 }

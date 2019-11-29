@@ -99,7 +99,7 @@ public class Nivel3 extends Nivel{
 	
 	
 	public Nivel siguienteNivel() {
-		return new Nivel3(null);
+		return null;
 	}
 
 	 

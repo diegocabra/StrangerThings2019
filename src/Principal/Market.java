@@ -74,8 +74,11 @@ public class Market {
 	if (fabricado.getCosto()<=getCantidadBombas())// alcanza(); habilita oro 
 		toreturn=true;
 	return toreturn;
-}
+	}
 	
+	public void reiniciarOro() {
+		monedas=monedasInicio;
+	}
 	
 }
 
