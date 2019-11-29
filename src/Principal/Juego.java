@@ -54,7 +54,6 @@ public class Juego {
 		nivel = n;
 		n.setJuego(this);
 		puntos = p;
-		//monedas = nivel.getMonedasIniciales();
 		
 		enemigos = new Coleccion<Enemigo>();
 		gui = new MapaGUI(this);
@@ -143,6 +142,10 @@ public class Juego {
 	
 	public void setBombas() {
 		gui.setBombas();
+	}
+	
+	public Market getMarket() {
+		return gui.getMarket();
 	}
 }
  
