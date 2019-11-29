@@ -24,7 +24,7 @@ public class VisitorDisparoPersonaje implements Visitor {
 	}
 	
 	public boolean visitarPersonaje(Personaje p){
-		//p.esperar();
+		disparoPersonaje.destruir();
 		return false;
 	}
 	

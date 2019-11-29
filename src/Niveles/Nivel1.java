@@ -43,6 +43,7 @@ public class Nivel1 extends Nivel{
 			juego.getMap().getCelda(random1,random2).agregar(muro);
 			juego.agregar(muro);
 			juego.setBombas();
+			 
 			
 			
 			random1 = r1.nextInt(juego.getFilas());

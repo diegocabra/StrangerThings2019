@@ -137,12 +137,12 @@ public class MapaGUI extends JFrame{
 		precioM3.setForeground(Color.white);
 		panelOpciones.add(precioM3);
 		
-		precioM4 = new JLabel("1000");
+		precioM4 = new JLabel("300");
 		precioM4.setBounds(220,65,40,40);
 		precioM4.setForeground(Color.white);
 		panelOpciones.add(precioM4);
 		
-		precioM5 = new JLabel("1500");
+		precioM5 = new JLabel("500");
 		precioM5.setBounds(285,65,40,40);
 		precioM5.setForeground(Color.white);
 		panelOpciones.add(precioM5);
@@ -329,6 +329,8 @@ public class MapaGUI extends JFrame{
 	public Market getMarket() {
 		return market;
 	}
+	
+	 
 
 
 }

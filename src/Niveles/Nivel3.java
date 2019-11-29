@@ -104,7 +104,7 @@ public class Nivel3 extends Nivel{
 
 	 
 	public Nivel reiniciarNivel() {
-		return new Nivel3(null);
+		return null;
 	}
 
 }
