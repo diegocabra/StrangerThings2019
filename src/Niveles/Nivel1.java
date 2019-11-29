@@ -3,6 +3,8 @@ import java.util.Random;
 
 import Enemigos.Enemigo;
 import Enemigos.Monstruo;
+import Enemigos.MonstruoCinco;
+import Enemigos.MonstruoCuatro;
 import Enemigos.MonstruoDos;
 import Enemigos.MonstruoTres;
 import Objetos.Agua;
@@ -21,9 +23,10 @@ public class Nivel1 extends Nivel{
 		juego = j;
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "1213";
+		String s = "333211";
 		Oleadas.add(s);
-
+		//5433211
+		//333211
 	}
  
 	public void run () {
@@ -67,12 +70,16 @@ public class Nivel1 extends Nivel{
 						powerUp = true;
 					
 					switch (Proximo) {
-	                case '1':  nuevo = new MonstruoTres(celda,powerUp);
+	                case '1':  nuevo = new Monstruo(celda,powerUp);
 	                         break;
-	                case '2':  nuevo = new MonstruoTres(celda,powerUp);
+	                case '2':  nuevo = new MonstruoDos(celda,powerUp);
 	                         break;
 	                case '3':  nuevo = new MonstruoTres(celda,powerUp);
 	                         break;
+	                case '4':  nuevo = new MonstruoCuatro(celda,powerUp);
+	                		break;
+	                case '5':  nuevo = new MonstruoCinco(celda,powerUp);
+	                		break;
 	            
 	            	}
 					celda.agregar(nuevo);

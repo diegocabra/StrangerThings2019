@@ -29,7 +29,7 @@ public class Nivel2 extends Nivel{
 
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "332441";
+		String s = "33344221";
 		Oleadas.add(s);
 
 	}
