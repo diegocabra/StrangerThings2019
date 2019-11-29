@@ -22,7 +22,7 @@ public class Muro extends Objeto {
 	}
 	
 	public void destruir() {
-		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/explosion.gif")));
+		//grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/explosion.gif")));
 		super.destruir();
 		
 		

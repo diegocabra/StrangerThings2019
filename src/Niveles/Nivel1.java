@@ -39,6 +39,7 @@ public class Nivel1 extends Nivel{
 			Objeto muro = new Muro(juego.getMap().getCelda(random1,random2));
 			juego.getMap().getCelda(random1,random2).agregar(muro);
 			juego.agregar(muro);
+			juego.setBombas();
 			
 			
 			random1 = r1.nextInt(juego.getFilas());
@@ -66,9 +67,9 @@ public class Nivel1 extends Nivel{
 						powerUp = true;
 					
 					switch (Proximo) {
-	                case '1':  nuevo = new Monstruo(celda,powerUp);
+	                case '1':  nuevo = new MonstruoTres(celda,powerUp);
 	                         break;
-	                case '2':  nuevo = new MonstruoDos(celda,powerUp);
+	                case '2':  nuevo = new MonstruoTres(celda,powerUp);
 	                         break;
 	                case '3':  nuevo = new MonstruoTres(celda,powerUp);
 	                         break;

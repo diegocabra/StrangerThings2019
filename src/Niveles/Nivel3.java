@@ -25,7 +25,7 @@ public class Nivel3 extends Nivel{
 
 		monedasIniciales=200;
 		Oleadas = new Coleccion<String>();
-		String s = "554332514444555454545454545455444335";
+		String s = "22345124";
 		Oleadas.add(s);
 
 	}

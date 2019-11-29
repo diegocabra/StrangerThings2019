@@ -26,9 +26,7 @@ public class Monje_1 extends Personaje {
 		
 		}
 
-
-	public void destruir() {
-	}
+ 
 
 	public void atacar() {
 		//cambiar Sprite (ATACANDO)
@@ -39,6 +37,11 @@ public class Monje_1 extends Personaje {
 		//cambiar Sprite (ESPERANDO)
 		grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Monje_1_Atacando.gif")));
 
+	}
+	
+	public void destruir() {
+		super.destruir();
+		generarBolas.terminate();
 	}
 
 }

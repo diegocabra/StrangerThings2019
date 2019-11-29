@@ -21,17 +21,19 @@ public class Monje_2 extends Personaje {
 	}
 
 
-@Override
+ 
 public void atacar() {
 	grafico.setIcon(new ImageIcon(this.getClass().getResource("/Sprites/Monje_2_Atacando.gif")));
 
 }
 
-@Override
+
 public void esperar() {
 	// TODO Auto-generated method stub
 
 }
+
+ 
 
 
 

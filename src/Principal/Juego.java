@@ -138,5 +138,9 @@ public class Juego {
 	public void cambiarNivelEtiqueta(int n) {
 		gui.cambiarNivel(n);
 	}
+	
+	public void setBombas() {
+		gui.setBombas();
+	}
 }
 
