@@ -1,0 +1,2 @@
+A veces cuando los enemigos se superponen, uno de ellos, al recibir daño,
+ se quedará en el lugar hasta ser muerto por un personaje cuerpo a cuerpo.
